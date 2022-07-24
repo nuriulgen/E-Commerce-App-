@@ -1,11 +1,14 @@
-import 'package:e_commerce_app/core/utility/extension/color/color_extension.dart';
-import 'package:e_commerce_app/core/utility/extension/context/context_extension.dart';
+
+import 'package:e_commerce_app/core/constant/extension/color_extension.dart';
+import 'package:e_commerce_app/core/constant/extension/context_extension.dart';
 import 'package:flutter/material.dart';
 
-import '../../../../../core/utility/extension/language/string_extension.dart';
 import '../../../../../product/constant/duration_items.dart';
 import '../../../../../product/util/button/custom_elevated_button.dart';
 import '../../../../../product/util/widget/onboard_widget.dart';
+import '../viewmodel/onboarding_viewmodel.dart';
+
+
 
 class OnBoardingView extends StatefulWidget {
   const OnBoardingView({Key? key}) : super(key: key);
@@ -14,23 +17,7 @@ class OnBoardingView extends StatefulWidget {
   State<OnBoardingView> createState() => _OnBoardingViewState();
 }
 
-class _OnBoardingViewState extends State<OnBoardingView> {
-  final AppStringConstants? _appStringConstants = AppStringConstants.instance;
-  late PageController _pageController;
-  int _activePage = 0;
-
-  @override
-  void initState() {
-    super.initState();
-    _pageController = PageController(initialPage: 0);
-  }
-
-  void _onPageChanged(int index) {
-    setState(() {
-      _activePage = index;
-    });
-  }
-
+class _OnBoardingViewState extends OnBoardingViewModel {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -62,20 +49,20 @@ class _OnBoardingViewState extends State<OnBoardingView> {
         color: context.chasm,
         textColor: context.white,
         onPressed: () {
-          _pageController.nextPage(
+          pageController.nextPage(
             duration: DurationItems.durationLow(),
             curve: Curves.easeIn,
           );
         },
-        title: _appStringConstants!.onBoardingNextButton,
+        title: appStringConstants!.onBoardingNextButton,
       ),
     );
   }
 
   PageView _pageView() {
     return PageView(
-      controller: _pageController,
-      onPageChanged: _onPageChanged,
+      controller: pageController,
+      onPageChanged: onPageChanged,
       children: [
         _onBoardFirst,
         _onBoardSecond,
@@ -85,19 +72,19 @@ class _OnBoardingViewState extends State<OnBoardingView> {
   }
 
   Widget get _onBoardFirst => OnBoardWidget(
-        title: _appStringConstants!.onBoardingTitle1,
-        subTitle: _appStringConstants!.onBoardingSubTitle1,
-        imagePath: _appStringConstants!.onBoardingImagePath1,
+        title: appStringConstants!.onBoardingTitle1,
+        subTitle: appStringConstants!.onBoardingSubTitle1,
+        imagePath: appStringConstants!.onBoardingImagePath1,
       );
   Widget get _onBoardSecond => OnBoardWidget(
-        title: _appStringConstants!.onBoardingTitle2,
-        subTitle: _appStringConstants!.onBoardingSubTitle2,
-        imagePath: _appStringConstants!.onBoardingImagePath2,
+        title: appStringConstants!.onBoardingTitle2,
+        subTitle: appStringConstants!.onBoardingSubTitle2,
+        imagePath: appStringConstants!.onBoardingImagePath2,
       );
   Widget get _onBoardThird => OnBoardWidget(
-        title: _appStringConstants!.onBoardingTitle3,
-        subTitle: _appStringConstants!.onBoardingSubTitle3,
-        imagePath: _appStringConstants!.onBoardingImagePath3,
+        title: appStringConstants!.onBoardingTitle3,
+        subTitle: appStringConstants!.onBoardingSubTitle3,
+        imagePath: appStringConstants!.onBoardingImagePath3,
       );
 
   Widget get _indicatorPageView => SizedBox(
@@ -113,7 +100,7 @@ class _OnBoardingViewState extends State<OnBoardingView> {
           child: CircleAvatar(
             radius: context.hw5,
             backgroundColor:
-                index == _activePage ? context.chasm : context.heatherGrey,
+                index == activePage ? context.chasm : context.heatherGrey,
           ),
         );
       },

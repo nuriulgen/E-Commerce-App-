@@ -1,5 +1,6 @@
-import 'package:e_commerce_app/core/utility/extension/color/color_extension.dart';
-import 'package:e_commerce_app/core/utility/extension/context/context_extension.dart';
+
+import 'package:e_commerce_app/core/constant/extension/color_extension.dart';
+import 'package:e_commerce_app/core/constant/extension/context_extension.dart';
 import 'package:flutter/material.dart';
 
 import '../../../core/constant/image/image_constants.dart';
