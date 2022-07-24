@@ -1,14 +1,12 @@
-
 import 'package:e_commerce_app/core/constant/extension/color_extension.dart';
 import 'package:e_commerce_app/core/constant/extension/context_extension.dart';
+import 'package:e_commerce_app/ui/views/authetication/login/login_view.dart';
 import 'package:flutter/material.dart';
 
 import '../../../../../product/constant/duration_items.dart';
 import '../../../../../product/util/button/custom_elevated_button.dart';
 import '../../../../../product/util/widget/onboard_widget.dart';
 import '../viewmodel/onboarding_viewmodel.dart';
-
-
 
 class OnBoardingView extends StatefulWidget {
   const OnBoardingView({Key? key}) : super(key: key);
@@ -53,6 +51,16 @@ class _OnBoardingViewState extends OnBoardingViewModel {
             duration: DurationItems.durationLow(),
             curve: Curves.easeIn,
           );
+          Future.microtask(
+            () {
+              if (activePage == (context.onBoardPageCount - 1)) {
+                Navigator.of(context).push(
+                  MaterialPageRoute(
+                      builder: (BuildContext context) => const LoginView()),
+                );
+              }
+            },
+          );
         },
         title: appStringConstants!.onBoardingNextButton,
       ),
@@ -92,7 +100,7 @@ class _OnBoardingViewState extends OnBoardingViewModel {
 
   Widget get _pageIndicator {
     return ListView.builder(
-      itemCount: 3,
+      itemCount: context.onBoardPageCount,
       scrollDirection: Axis.horizontal,
       itemBuilder: (context, index) {
         return Padding(

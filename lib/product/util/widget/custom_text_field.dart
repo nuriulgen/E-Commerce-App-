@@ -1,15 +1,18 @@
+// ignore_for_file: must_be_immutable
+
 import 'package:e_commerce_app/core/constant/extension/context_extension.dart';
 import 'package:flutter/material.dart';
 
 class CustomTextField extends StatefulWidget {
-  const CustomTextField(
+  CustomTextField(
       {Key? key,
       required this.labelText,
       this.textInputType,
       this.inputBorder,
       this.prefixIcon,
       this.suffix,
-      required this.obscureText})
+      required this.obscureText,
+      this.controller})
       : super(key: key);
   final String labelText;
   final bool obscureText;
@@ -17,6 +20,7 @@ class CustomTextField extends StatefulWidget {
   final InputBorder? inputBorder;
   final Widget? prefixIcon;
   final Widget? suffix;
+  TextEditingController? controller;
 
   @override
   State<CustomTextField> createState() => _CustomTextFieldState();

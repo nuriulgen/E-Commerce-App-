@@ -41,4 +41,6 @@ extension ContextExtension on BuildContext {
   double get hw50 => 50;
   double get hw100 => 100;
   double get hw330 => 330;
+
+  int get onBoardPageCount => 3;
 }

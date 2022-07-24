@@ -1,4 +1,5 @@
 import 'package:e_commerce_app/core/constant/extension/color_extension.dart';
+import 'package:e_commerce_app/core/constant/extension/context_extension.dart';
 import 'package:flutter/material.dart';
 
 class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
@@ -9,7 +10,11 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
   Widget build(BuildContext context) {
     return AppBar(
       leading: IconButton(
-        icon: Icon(Icons.chevron_left_outlined, color: context.heatherGrey),
+        icon: Icon(
+          Icons.chevron_left_outlined,
+          color: context.heatherGrey,
+          size: context.hw30,
+        ),
         onPressed: () {
           Navigator.pop(context);
         },
@@ -17,7 +22,7 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
       title: Text(
         title,
         style: Theme.of(context).textTheme.headline6?.copyWith(
-            fontWeight: FontWeight.w700, color: context.blackChesnut),
+            fontWeight: FontWeight.w500, color: context.blackChesnut),
       ),
       centerTitle: true,
     );

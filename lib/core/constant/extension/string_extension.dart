@@ -21,4 +21,13 @@ class AppStringConstants {
   final String onBoardingImagePath1 = 'on_boarding1';
   final String onBoardingImagePath2 = 'on_boarding2';
   final String onBoardingImagePath3 = 'on_boarding3';
+
+  final String signUpTitle = 'Sign Up';
+  final String signUpFirstNameField = 'First Name';
+  final String signUpLastNameField = 'Last Name';
+  final String signUpEmail = 'Email Adress';
+  final String signUpPassword = 'Password';
+  final String signUpElevatedButton = 'Sign Up';
+  final String signUpEmailMessage = 'We\'ll send your order confirmation here.';
+  final String signUpPasswordMessage = 'Must be 10 or more characters.';
 }
