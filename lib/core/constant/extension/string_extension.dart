@@ -30,4 +30,7 @@ class AppStringConstants {
   final String signUpElevatedButton = 'Sign Up';
   final String signUpEmailMessage = 'We\'ll send your order confirmation here.';
   final String signUpPasswordMessage = 'Must be 10 or more characters.';
+  final String signUpSelectGender = 'Mostly interested in (Optional):';
+  final String signUpSelectMale = 'Male';
+  final String signUpSelectFemale = 'Female';
 }

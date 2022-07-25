@@ -1,6 +1,6 @@
 import 'package:e_commerce_app/core/constant/extension/color_extension.dart';
 import 'package:e_commerce_app/core/constant/extension/context_extension.dart';
-import 'package:e_commerce_app/ui/views/authetication/login/login_view.dart';
+import 'package:e_commerce_app/ui/views/authetication/login/view/login_view.dart';
 import 'package:flutter/material.dart';
 
 import '../../../../../product/constant/duration_items.dart';

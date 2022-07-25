@@ -8,6 +8,7 @@ extension ContextExtension on BuildContext {
   EdgeInsets get paddingMediumAll => const EdgeInsets.all(16);
   EdgeInsets get paddingHighAll => const EdgeInsets.all(24);
 
+  EdgeInsets get paddingX2Vertical => const EdgeInsets.symmetric(vertical: 5);
   EdgeInsets get paddingXVertical => const EdgeInsets.symmetric(vertical: 10);
   EdgeInsets get padding2xVertical => const EdgeInsets.symmetric(vertical: 20);
 
@@ -19,6 +20,7 @@ extension ContextExtension on BuildContext {
   EdgeInsets get paddingXTop => const EdgeInsets.only(top: 10);
   EdgeInsets get padding2xTop => const EdgeInsets.only(top: 20);
 
+  EdgeInsets get paddingX2Bottom => const EdgeInsets.only(bottom: 5);
   EdgeInsets get paddingXBottom => const EdgeInsets.only(bottom: 10);
   EdgeInsets get padding2xBottom => const EdgeInsets.only(bottom: 20);
 
@@ -40,6 +42,7 @@ extension ContextExtension on BuildContext {
   double get hw45 => 45;
   double get hw50 => 50;
   double get hw100 => 100;
+  double get hw170 => 170;
   double get hw330 => 330;
 
   int get onBoardPageCount => 3;

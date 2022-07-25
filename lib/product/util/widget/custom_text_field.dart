@@ -31,7 +31,7 @@ class _CustomTextFieldState extends State<CustomTextField> {
   Widget build(BuildContext context) {
     return Padding(
       padding: context.paddingXVertical,
-      child: TextField(
+      child: TextFormField(
         keyboardType: widget.textInputType,
         textInputAction: TextInputAction.next,
         obscureText: widget.obscureText,
@@ -43,6 +43,9 @@ class _CustomTextFieldState extends State<CustomTextField> {
           prefixIcon: widget.prefixIcon,
           suffixIcon: widget.suffix,
         ),
+        validator: (String? value) {
+          return (value?.isNotEmpty ?? false) ? null : 'Bu alan boş olamaz.';
+        },
       ),
     );
   }
