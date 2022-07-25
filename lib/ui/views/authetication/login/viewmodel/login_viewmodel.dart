@@ -27,7 +27,7 @@ abstract class LoginViewModel extends State<LoginView> {
     });
   }
 
-  void change(value) {
+  void selectGender(value) {
     setState(() {
       gender = value.toString();
     });

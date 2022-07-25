@@ -69,7 +69,10 @@ class InputField extends StatelessWidget {
         ),
         Text(
           appStringConstants!.signUpEmailMessage,
-          style: const TextStyle(color: Colors.black),
+          style:  Theme.of(context)
+          .textTheme
+          .caption
+          ?.copyWith(color: context.heatherGrey),
         ),
         
       ],

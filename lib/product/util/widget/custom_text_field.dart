@@ -3,6 +3,8 @@
 import 'package:e_commerce_app/core/constant/extension/context_extension.dart';
 import 'package:flutter/material.dart';
 
+import '../../constant/exception.dart';
+
 class CustomTextField extends StatefulWidget {
   CustomTextField(
       {Key? key,
@@ -44,7 +46,9 @@ class _CustomTextFieldState extends State<CustomTextField> {
           suffixIcon: widget.suffix,
         ),
         validator: (String? value) {
-          return (value?.isNotEmpty ?? false) ? null : 'Bu alan boş olamaz.';
+          return (value?.isNotEmpty ?? false)
+              ? null
+              : ValidateEmptyException().toString();
         },
       ),
     );

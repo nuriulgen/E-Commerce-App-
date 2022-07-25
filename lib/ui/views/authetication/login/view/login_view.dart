@@ -69,28 +69,28 @@ class _LoginViewState extends LoginViewModel {
 
   SizedBox _selectGenderButton(BuildContext context) {
     return SizedBox(
-                  height: context.hw100,
-                  width: MediaQuery.of(context).size.width,
-                  child: Card(
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceAround,
-                      children: [
-                        CustomRadioButton(
-                          title: appStringConstants!.signUpSelectFemale,
-                          value: appStringConstants!.signUpSelectFemale,
-                          groupValue: gender,
-                          onChanged: change,
-                        ),
-                        CustomRadioButton(
-                          title: appStringConstants!.signUpSelectMale,
-                          value: appStringConstants!.signUpSelectMale,
-                          groupValue: gender,
-                          onChanged: change,
-                        ),
-                      ],
-                    ),
-                  ),
-                );
+      height: context.hw100,
+      width: MediaQuery.of(context).size.width,
+      child: Card(
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceAround,
+          children: [
+            CustomRadioButton(
+              title: appStringConstants!.signUpSelectFemale,
+              value: appStringConstants!.signUpSelectFemale,
+              groupValue: gender,
+              onChanged: selectGender,
+            ),
+            CustomRadioButton(
+              title: appStringConstants!.signUpSelectMale,
+              value: appStringConstants!.signUpSelectMale,
+              groupValue: gender,
+              onChanged: selectGender,
+            ),
+          ],
+        ),
+      ),
+    );
   }
 
   Text _selectGenderText(BuildContext context) {
@@ -131,7 +131,10 @@ class _LoginViewState extends LoginViewModel {
   Text _passwordMessage() {
     return Text(
       appStringConstants!.signUpPasswordMessage,
-      style: const TextStyle(color: Colors.black),
+      style: Theme.of(context)
+          .textTheme
+          .caption
+          ?.copyWith(color: context.heatherGrey),
     );
   }
 }
