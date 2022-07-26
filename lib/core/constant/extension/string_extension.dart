@@ -33,4 +33,23 @@ class AppStringConstants {
   final String signUpSelectGender = 'Mostly interested in (Optional):';
   final String signUpSelectMale = 'Male';
   final String signUpSelectFemale = 'Female';
+
+  final String homeBigCardTitle1 = 'New Trend';
+  final String homeBigCardTitle2 = 'Srippes';
+  final String homeBigCardTitle3 = 'Female';
+  final String homeBigCardImagePath1 = 'model1';
+  final String homeBigCardImagePath2 = 'model3';
+  final String homeBigCardImagePath3 = 'Female';
+  final String homeSmallCardTitle1 = 'Pull&Bear Slim Fit';
+  final String homeSmallCardTitle2 = 'Pull&Bear Slim Fit';
+  final String homeSmallCardTitle3 = 'Summer Coords';
+  final String homeSmallCardTitle4 = 'Face Coverings';
+  final String homeSmallCardSubTitle1 = 'Dress';
+  final String homeSmallCardSubTitle2 = 'Dress';
+  final String homeSmallCardSubTitle3 = 'Tshirt';
+  final String homeSmallCardSubTitle4 = 'Deodorant';
+  final String homeSmallCardImagePath1 = 'red_dress';
+  final String homeSmallCardImagePath2 = 'green_dress';
+  final String homeSmallCardImagePath3 = 'tshirt';
+  final String homeSmallCardImagePath4 = 'deodrant';
 }

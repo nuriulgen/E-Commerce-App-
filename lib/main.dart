@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
-import 'ui/views/authetication/onboarding/view/onboarding_view.dart';
+import 'ui/views/home/home_view.dart';
 
 void main() {
   runApp(const MyApp());
@@ -12,7 +12,7 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return  MaterialApp(
+    return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'E-Commerce App',
       theme: ThemeData(
@@ -23,7 +23,7 @@ class MyApp extends StatelessWidget {
         ),
         scaffoldBackgroundColor: const Color(0xFFFFFFFF),
       ),
-      home: const OnBoardingView(),
+      home: const HomeView(),
     );
   }
 }

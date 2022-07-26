@@ -44,7 +44,7 @@ class _LoginViewState extends LoginViewModel {
                 ),
                 _passwordMessage(),
                 Padding(
-                  padding: context.paddingXTop,
+                  padding: context.padding2xTop,
                   child: _selectGenderText(context),
                 ),
                 Padding(

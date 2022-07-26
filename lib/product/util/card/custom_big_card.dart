@@ -22,18 +22,25 @@ class CustomBigCard extends StatelessWidget {
           children: [
             Padding(
               padding: context.padding2xLeft,
-              child: Text(title, style: Theme.of(context).textTheme.headline5),
+              child: cardTitle(context),
             ),
             Padding(
               padding: context.paddingXRight,
-              child: SizedBox(
-                height: 200,
-                child: PngImage(imagePath: imagePath),
-              ),
+              child: cardImage(context),
             ),
           ],
         ),
       ),
     );
   }
+
+  SizedBox cardImage(BuildContext context) {
+    return SizedBox(
+      height: context.hw200,
+      child: PngImage(imagePath: imagePath),
+    );
+  }
+
+  Text cardTitle(BuildContext context) =>
+      Text(title, style: Theme.of(context).textTheme.headline5);
 }
