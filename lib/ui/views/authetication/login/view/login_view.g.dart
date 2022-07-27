@@ -19,8 +19,7 @@ class SignUpButton extends StatelessWidget {
         onPressed: () {
           if (formKey.currentState?.validate() ?? false) {
             Navigator.of(context).pushReplacement(
-                MaterialPageRoute(
-                    builder: (context) => const HomeView()));
+                MaterialPageRoute(builder: (context) => const HomeView()));
           }
         },
         color: context.chasm,
@@ -69,12 +68,11 @@ class InputField extends StatelessWidget {
         ),
         Text(
           appStringConstants!.signUpEmailMessage,
-          style:  Theme.of(context)
-          .textTheme
-          .caption
-          ?.copyWith(color: context.heatherGrey),
+          style: Theme.of(context)
+              .textTheme
+              .caption
+              ?.copyWith(color: context.heatherGrey),
         ),
-        
       ],
     );
   }

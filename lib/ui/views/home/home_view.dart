@@ -1,7 +1,8 @@
-import 'package:e_commerce_app/core/constant/extension/context_extension.dart';
-import 'package:e_commerce_app/core/constant/extension/string_extension.dart';
+
+import 'package:e_commerce_app/core/constants/extension/context_extension.dart';
 import 'package:flutter/material.dart';
 
+import '../../../core/constants/extension/string_extension.dart';
 import '../../../product/util/card/custom_big_card.dart';
 import '../../../product/util/card/custom_small_card.dart';
 

@@ -1,9 +1,9 @@
-import 'package:e_commerce_app/core/constant/extension/color_extension.dart';
-import 'package:e_commerce_app/core/constant/extension/context_extension.dart';
+import 'package:e_commerce_app/core/constants/extension/color_extension.dart';
+import 'package:e_commerce_app/core/constants/extension/context_extension.dart';
 import 'package:e_commerce_app/ui/views/authetication/login/view/login_view.dart';
 import 'package:flutter/material.dart';
 
-import '../../../../../product/constant/duration_items.dart';
+import '../../../../../product/constants/duration_items.dart';
 import '../../../../../product/util/button/custom_elevated_button.dart';
 import '../../../../../product/util/widget/onboard_widget.dart';
 import '../viewmodel/onboarding_viewmodel.dart';

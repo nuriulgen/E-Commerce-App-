@@ -1,5 +1,5 @@
-import 'package:e_commerce_app/core/constant/extension/color_extension.dart';
-import 'package:e_commerce_app/core/constant/extension/context_extension.dart';
+import 'package:e_commerce_app/core/constants/extension/color_extension.dart';
+import 'package:e_commerce_app/core/constants/extension/context_extension.dart';
 import 'package:flutter/material.dart';
 
 class CustomRadioButton extends StatelessWidget {

@@ -1,12 +1,13 @@
-import 'package:e_commerce_app/core/constant/extension/color_extension.dart';
-import 'package:e_commerce_app/core/constant/extension/context_extension.dart';
-import 'package:e_commerce_app/core/constant/extension/string_extension.dart';
-import 'package:e_commerce_app/product/constant/duration_items.dart';
+import 'package:e_commerce_app/core/constants/extension/color_extension.dart';
+import 'package:e_commerce_app/core/constants/extension/context_extension.dart';
 import 'package:e_commerce_app/product/util/button/custom_elevated_button.dart';
 import 'package:e_commerce_app/product/util/widget/custom_app_bar.dart';
 import 'package:e_commerce_app/ui/views/home/home_view.dart';
 import 'package:flutter/material.dart';
 
+
+import '../../../../../core/constants/extension/string_extension.dart';
+import '../../../../../product/constants/duration_items.dart';
 import '../../../../../product/util/widget/custom_radio_button.dart';
 import '../../../../../product/util/widget/custom_text_field.dart';
 import '../viewmodel/login_viewmodel.dart';
@@ -113,9 +114,7 @@ class _LoginViewState extends LoginViewModel {
             : CrossFadeState.showSecond,
         duration: DurationItems.durationNormal(),
       ),
-      onPressed: () {
-        changeVisibility();
-      },
+      onPressed: changeVisibility,
     );
   }
 

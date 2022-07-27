@@ -1,9 +1,9 @@
 // ignore_for_file: must_be_immutable
 
-import 'package:e_commerce_app/core/constant/extension/context_extension.dart';
+import 'package:e_commerce_app/core/constants/extension/context_extension.dart';
 import 'package:flutter/material.dart';
 
-import '../../constant/exception.dart';
+import '../../constants/exception/exception.dart';
 
 class CustomTextField extends StatefulWidget {
   CustomTextField(

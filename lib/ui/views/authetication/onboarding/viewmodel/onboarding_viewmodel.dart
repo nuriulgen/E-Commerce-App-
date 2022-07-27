@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
-import '../../../../../core/constant/extension/string_extension.dart';
+
+import '../../../../../core/constants/extension/string_extension.dart';
 import '../view/onboarding_view.dart';
 
 abstract class OnBoardingViewModel extends State<OnBoardingView> {
