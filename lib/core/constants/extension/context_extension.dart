@@ -17,6 +17,7 @@ extension ContextExtension on BuildContext {
   EdgeInsets get padding2xHorizontal =>
       const EdgeInsets.symmetric(horizontal: 20);
 
+  EdgeInsets get paddingX2Top => const EdgeInsets.only(top: 10);
   EdgeInsets get paddingXTop => const EdgeInsets.only(top: 10);
   EdgeInsets get padding2xTop => const EdgeInsets.only(top: 20);
 
@@ -28,9 +29,8 @@ extension ContextExtension on BuildContext {
   EdgeInsets get paddingXLeft => const EdgeInsets.only(left: 10);
   EdgeInsets get padding2xLeft => const EdgeInsets.only(left: 20);
 
-   EdgeInsets get paddingXRight => const EdgeInsets.only(right: 10);
+  EdgeInsets get paddingXRight => const EdgeInsets.only(right: 10);
   EdgeInsets get padding2xRight => const EdgeInsets.only(right: 20);
-
 
   //SIZE
   double get height => MediaQuery.of(this).size.height;
@@ -55,6 +55,11 @@ extension ContextExtension on BuildContext {
   double get hw170 => 170;
   double get hw200 => 200;
   double get hw330 => 330;
-
+  
+  //Count
   int get onBoardPageCount => 3;
+  int get tabBarCount => 2;
+  int get initialIndex => 0;
+  int get gridViewCrossAxisCount => 2;
+  
 }

@@ -1,4 +1,4 @@
-part of './home_view.dart';
+part of 'home_view.dart';
 
 class BigCardFirst extends StatelessWidget {
   const BigCardFirst({
@@ -10,9 +10,12 @@ class BigCardFirst extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return CustomBigCard(
-      imagePath: appStringConstants!.homeBigCardImagePath1,
-      title: appStringConstants!.homeBigCardTitle1,
+    return InkWell(
+      onTap: () {},
+      child: CustomBigCard(
+        imagePath: appStringConstants!.homeBigCardImagePath1,
+        title: appStringConstants!.homeBigCardTitle1,
+      ),
     );
   }
 }
@@ -30,6 +33,23 @@ class BigCardSecond extends StatelessWidget {
     return CustomBigCard(
       imagePath: appStringConstants!.homeBigCardImagePath2,
       title: appStringConstants!.homeBigCardTitle2,
+    );
+  }
+}
+
+class BigCardThird extends StatelessWidget {
+  const BigCardThird({
+    Key? key,
+    required this.appStringConstants,
+  }) : super(key: key);
+
+  final AppStringConstants? appStringConstants;
+
+  @override
+  Widget build(BuildContext context) {
+    return CustomBigCard(
+      imagePath: appStringConstants!.homeBigCardImagePath3,
+      title: appStringConstants!.homeBigCardTitle3,
     );
   }
 }
@@ -84,6 +104,60 @@ class SmallCardFirst extends StatelessWidget {
           imagePath: appStringConstants!.homeSmallCardImagePath2,
           title: appStringConstants!.homeSmallCardTitle2,
           subTitle: appStringConstants!.homeSmallCardSubTitle2,
+        ),
+      ],
+    );
+  }
+}
+
+class SavedItemsListTile extends StatelessWidget {
+  const SavedItemsListTile({
+    Key? key,
+    required this.appStringConstants,
+  }) : super(key: key);
+
+  final AppStringConstants? appStringConstants;
+
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      children: [
+        CustomListTileCard(
+          imagePath: appStringConstants!.homeListTileCardImagePath1,
+          title: appStringConstants!.homeListTileCardTitle1,
+          subTitle: appStringConstants!.homeListTileCardSubTitle1,
+        ),
+        CustomListTileCard(
+          imagePath: appStringConstants!.homeListTileCardImagePath2,
+          title: appStringConstants!.homeListTileCardTitle2,
+          subTitle: appStringConstants!.homeListTileCardSubTitle2,
+        ),
+      ],
+    );
+  }
+}
+
+class SavedItemsTitle extends StatelessWidget {
+  const SavedItemsTitle({
+    Key? key,
+    required this.appStringConstants,
+  }) : super(key: key);
+
+  final AppStringConstants? appStringConstants;
+
+  @override
+  Widget build(BuildContext context) {
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      children: [
+        Text(
+          appStringConstants!.homeSaveItemsTitle,
+          style: Theme.of(context).textTheme.subtitle1,
+        ),
+        CustomTextButton(
+          textColor: context.chasm,
+          title: appStringConstants!.homeSaveItemsSubTitle,
+          onPressed: () {},
         ),
       ],
     );

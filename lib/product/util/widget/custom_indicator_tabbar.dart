@@ -54,6 +54,7 @@ class _CustomIndicatorTabBarState extends State<CustomIndicatorTabBar>
             length: context.tabBarCount,
             initialIndex: context.initialIndex,
             child: TabBarView(
+               physics: const NeverScrollableScrollPhysics(),
               controller: tabController,
               children: [
                 Expanded(child: widget.widgetFirst),

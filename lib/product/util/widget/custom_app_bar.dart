@@ -1,11 +1,15 @@
-
 import 'package:e_commerce_app/core/constants/extension/color_extension.dart';
 import 'package:e_commerce_app/core/constants/extension/context_extension.dart';
 import 'package:flutter/material.dart';
 
 class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
-  const CustomAppBar({Key? key, required this.title}) : super(key: key);
+  const CustomAppBar({
+    Key? key,
+    required this.title,
+    this.icon,
+  }) : super(key: key);
   final String title;
+  final Icon? icon;
 
   @override
   Widget build(BuildContext context) {
@@ -26,6 +30,9 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
             fontWeight: FontWeight.w500, color: context.blackChesnut),
       ),
       centerTitle: true,
+      actions: [
+        IconButton(onPressed: () {}, icon: icon ?? const SizedBox.shrink())
+      ],
     );
   }
 

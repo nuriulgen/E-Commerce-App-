@@ -60,4 +60,26 @@ class AppStringConstants {
   final String homeListTileCardImagePath2 = 'tshirt';
   final String homeSaveItemsTitle = 'Saved items';
   final String homeSaveItemsSubTitle = 'View All';
+
+  final String newTrendTitle = 'New Trend';
+  final String newTrendTabTitle1 = 'Sort';
+  final String newTrendTabTitle2 = 'Filter';
+  final String newTrendProductTitle1 = 'Handbag LV';
+  final String newTrendProductTitle2 = 'Dress';
+  final String newTrendProductTitle3 = 'Shoes';
+  final String newTrendProductTitle4 = 'T-shirt';
+  final String newTrendProductTitle5 = 'Handbag';
+  final String newTrendProductTitle6 = 'Short';
+  final String newTrendProductSubTitle1 = '225';
+  final String newTrendProductSubTitle2 = '87';
+  final String newTrendProductSubTitle3 = '201';
+  final String newTrendProductSubTitle4 = '102';
+  final String newTrendProductSubTitle5 = '98';
+  final String newTrendProductSubTitle6 = '86';
+  final String newTrendProductImagePath1 = 'louis_vuitton';
+  final String newTrendProductImagePath2 = 'skirt';
+  final String newTrendProductImagePath3 = 'shoes';
+  final String newTrendProductImagePath4 = 'tshirt';
+  final String newTrendProductImagePath5 = 'short';
+  final String newTrendProductImagePath6 = 'bag';
 }

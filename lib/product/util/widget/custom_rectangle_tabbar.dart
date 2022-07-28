@@ -39,26 +39,33 @@ class _CustomRectangleTabBarState extends State<CustomRectangleTabBar>
   Widget build(BuildContext context) {
     return Column(
       children: [
-        TabBar(
-          controller: tabController,
-          indicatorColor: context.chasm,
-          tabs: [
-            tabsTitleFirst(context),
-            tabsTitleSecond(context),
-          ],
-          labelColor: context.chasm,
-          indicator: tabsStyle(context),
+        Padding(
+          padding: context.paddingXVertical,
+          child: TabBar(
+            controller: tabController,
+            indicatorColor: context.chasm,
+            tabs: [
+              tabsTitleFirst(context),
+              tabsTitleSecond(context),
+            ],
+            labelColor: context.chasm,
+            indicator: tabsStyle(context),
+          ),
         ),
         Expanded(
           child: DefaultTabController(
             length: context.tabBarCount,
             initialIndex: context.initialIndex,
-            child: TabBarView(
-              controller: tabController,
-              children: [
-                Expanded(child: widget.widgetFirst),
-                Expanded(child: widget.widgetSecond),
-              ],
+            child: Padding(
+              padding: context.paddingXVertical,
+              child: TabBarView(
+                physics: const NeverScrollableScrollPhysics(),
+                controller: tabController,
+                children: [
+                  Expanded(child: widget.widgetFirst),
+                  Expanded(child: widget.widgetSecond),
+                ],
+              ),
             ),
           ),
         ),
@@ -85,7 +92,7 @@ class _CustomRectangleTabBarState extends State<CustomRectangleTabBar>
         Padding(
           padding: context.paddingLowAll,
           child: Text(
-            widget.titleFirst,
+            widget.titleSecond,
             style: Theme.of(context)
                 .textTheme
                 .subtitle1

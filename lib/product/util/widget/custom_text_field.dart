@@ -3,7 +3,7 @@
 import 'package:e_commerce_app/core/constants/extension/context_extension.dart';
 import 'package:flutter/material.dart';
 
-import '../../constants/exception/exception.dart';
+import '../../constants/exception/validate_exception.dart';
 
 class CustomTextField extends StatefulWidget {
   CustomTextField(
