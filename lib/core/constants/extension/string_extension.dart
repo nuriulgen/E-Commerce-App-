@@ -36,10 +36,10 @@ class AppStringConstants {
 
   final String homeBigCardTitle1 = 'New Trend';
   final String homeBigCardTitle2 = 'Srippes';
-  final String homeBigCardTitle3 = 'Female';
+  final String homeBigCardTitle3 = 'Summer Sea';
   final String homeBigCardImagePath1 = 'model1';
   final String homeBigCardImagePath2 = 'model3';
-  final String homeBigCardImagePath3 = 'Female';
+  final String homeBigCardImagePath3 = 'model2';
   final String homeSmallCardTitle1 = 'Pull&Bear Slim Fit';
   final String homeSmallCardTitle2 = 'Pull&Bear Slim Fit';
   final String homeSmallCardTitle3 = 'Summer Coords';
@@ -52,4 +52,12 @@ class AppStringConstants {
   final String homeSmallCardImagePath2 = 'green_dress';
   final String homeSmallCardImagePath3 = 'tshirt';
   final String homeSmallCardImagePath4 = 'deodrant';
+  final String homeListTileCardTitle1 = 'Handbag LV';
+  final String homeListTileCardTitle2 = 'T-shirt';
+  final String homeListTileCardSubTitle1 = '225';
+  final String homeListTileCardSubTitle2 = '123';
+  final String homeListTileCardImagePath1 = 'louis_vuitton';
+  final String homeListTileCardImagePath2 = 'tshirt';
+  final String homeSaveItemsTitle = 'Saved items';
+  final String homeSaveItemsSubTitle = 'View All';
 }
