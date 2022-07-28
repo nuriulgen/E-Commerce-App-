@@ -21,17 +21,25 @@ class CustomRadioButton extends StatelessWidget {
       height: context.hw50,
       width: context.hw170,
       child: ListTile(
-        title: Text(
-          title,
-          style: Theme.of(context).textTheme.subtitle1,
-        ),
-        leading: Radio(
-          activeColor: context.chasm,
-          value: value,
-          groupValue: groupValue,
-          onChanged: onChanged,
-        ),
+        title: _title(context),
+        leading: radioButton(context),
       ),
     );
+  }
+
+  Radio<String> radioButton(BuildContext context) {
+    return Radio(
+        activeColor: context.chasm,
+        value: value,
+        groupValue: groupValue,
+        onChanged: onChanged,
+      );
+  }
+
+  Text _title(BuildContext context) {
+    return Text(
+        title,
+        style: Theme.of(context).textTheme.subtitle1,
+      );
   }
 }

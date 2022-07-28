@@ -45,8 +45,8 @@ class _CustomRectangleTabBarState extends State<CustomRectangleTabBar>
             controller: tabController,
             indicatorColor: context.chasm,
             tabs: [
-              tabsTitleFirst(context),
-              tabsTitleSecond(context),
+              _tabsTitleFirst(context),
+              _tabsTitleSecond(context),
             ],
             labelColor: context.chasm,
             indicator: tabsStyle(context),
@@ -84,7 +84,7 @@ class _CustomRectangleTabBarState extends State<CustomRectangleTabBar>
     );
   }
 
-  Row tabsTitleSecond(BuildContext context) {
+  Row _tabsTitleSecond(BuildContext context) {
     return Row(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
@@ -103,7 +103,7 @@ class _CustomRectangleTabBarState extends State<CustomRectangleTabBar>
     );
   }
 
-  Row tabsTitleFirst(BuildContext context) {
+  Row _tabsTitleFirst(BuildContext context) {
     return Row(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [

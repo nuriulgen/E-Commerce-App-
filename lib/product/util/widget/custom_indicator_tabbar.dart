@@ -43,8 +43,8 @@ class _CustomIndicatorTabBarState extends State<CustomIndicatorTabBar>
           controller: tabController,
           indicatorColor: context.chasm,
           tabs: [
-            tabsTitleFirst(context),
-            tabsTitleSecond(context),
+            _tabsTitleFirst(context),
+            _tabsTitleSecond(context),
           ],
           labelColor: context.chasm,
           indicator: tabsStyle(context),
@@ -77,7 +77,7 @@ class _CustomIndicatorTabBarState extends State<CustomIndicatorTabBar>
     );
   }
 
-  Row tabsTitleSecond(BuildContext context) {
+  Row _tabsTitleSecond(BuildContext context) {
     return Row(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
@@ -96,7 +96,7 @@ class _CustomIndicatorTabBarState extends State<CustomIndicatorTabBar>
     );
   }
 
-  Row tabsTitleFirst(BuildContext context) {
+  Row _tabsTitleFirst(BuildContext context) {
     return Row(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [

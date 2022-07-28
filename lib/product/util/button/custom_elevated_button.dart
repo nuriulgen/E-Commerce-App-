@@ -18,21 +18,29 @@ class CustomElevatedButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ElevatedButton(
-      style: ElevatedButton.styleFrom(
-          primary: color,
-          shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(context.hw10))),
+      style: _buttonStyle(context),
       onPressed: onPressed,
       child: Padding(
         padding: context.paddingMediumAll,
-        child: Text(
-          title,
-          style: Theme.of(context)
-              .textTheme
-              .subtitle2
-              ?.copyWith(color: textColor, fontWeight: FontWeight.bold),
-        ),
+        child: _elevatedButtonTitle(context),
       ),
     );
+  }
+
+  Text _elevatedButtonTitle(BuildContext context) {
+    return Text(
+        title,
+        style: Theme.of(context)
+            .textTheme
+            .subtitle2
+            ?.copyWith(color: textColor, fontWeight: FontWeight.bold),
+      );
+  }
+
+  ButtonStyle _buttonStyle(BuildContext context) {
+    return ElevatedButton.styleFrom(
+        primary: color,
+        shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(context.hw10)));
   }
 }

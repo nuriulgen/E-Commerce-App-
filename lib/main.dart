@@ -1,4 +1,5 @@
 import 'package:e_commerce_app/core/constants/app/app_constants.dart';
+import 'package:e_commerce_app/ui/views/home/home/home_view.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
@@ -24,7 +25,7 @@ class MyApp extends StatelessWidget {
         ),
         scaffoldBackgroundColor: const Color(0xFFFFFFFF),
       ),
-      home: const NewTrendViewDetail(),
+      home: const HomeView(),
     );
   }
 }

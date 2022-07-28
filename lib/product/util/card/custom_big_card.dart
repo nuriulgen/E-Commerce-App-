@@ -23,11 +23,11 @@ class CustomBigCard extends StatelessWidget {
           children: [
             Padding(
               padding: context.padding2xLeft,
-              child: cardTitle(context),
+              child: _cardTitle(context),
             ),
             Padding(
               padding: context.paddingXRight,
-              child: cardImage(context),
+              child: _cardImage(context),
             ),
           ],
         ),
@@ -35,13 +35,13 @@ class CustomBigCard extends StatelessWidget {
     );
   }
 
-  SizedBox cardImage(BuildContext context) {
+  SizedBox _cardImage(BuildContext context) {
     return SizedBox(
       height: context.hw200,
       child: PngImage(imagePath: imagePath),
     );
   }
 
-  Text cardTitle(BuildContext context) =>
+  Text _cardTitle(BuildContext context) =>
       Text(title, style: Theme.of(context).textTheme.headline5);
 }

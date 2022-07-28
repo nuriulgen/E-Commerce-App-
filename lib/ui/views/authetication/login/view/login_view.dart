@@ -41,7 +41,7 @@ class _LoginViewState extends LoginViewModel {
                 ),
                 Padding(
                   padding: context.paddingX2Vertical,
-                  child: passwordField(),
+                  child: _passwordField(),
                 ),
                 _passwordMessage(),
                 Padding(
@@ -118,7 +118,7 @@ class _LoginViewState extends LoginViewModel {
     );
   }
 
-  CustomTextField passwordField() {
+  CustomTextField _passwordField() {
     return CustomTextField(
       controller: passwordController,
       labelText: appStringConstants!.signUpPassword,

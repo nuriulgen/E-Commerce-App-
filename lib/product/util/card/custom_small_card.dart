@@ -21,11 +21,12 @@ class CustomSmallCard extends StatefulWidget {
 }
 
 class _CustomSmallCardState extends State<CustomSmallCard> {
-  bool isLiked = false;
+  bool _isLiked = false;
+  final int _flex = 2;
 
-  void isChangedColor() {
+  void _isChangedColor() {
     setState(() {
-      isLiked = !isLiked;
+      _isLiked = !_isLiked;
     });
   }
 
@@ -41,14 +42,11 @@ class _CustomSmallCardState extends State<CustomSmallCard> {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Expanded(
-                flex: 2,
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [cardImage(), likeButton()],
-                ),
+                flex: _flex,
+                child: _imageLikeButton(),
               ),
-              cardTitle(context),
-              cardSubTitle(context),
+              _cardTitle(context),
+              _cardSubTitle(context),
             ],
           ),
         ),
@@ -56,14 +54,21 @@ class _CustomSmallCardState extends State<CustomSmallCard> {
     );
   }
 
-  Text cardSubTitle(BuildContext context) {
+  Row _imageLikeButton() {
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      children: [cardImage(), likeButton()],
+    );
+  }
+
+  Text _cardSubTitle(BuildContext context) {
     return Text(
       widget.subTitle ?? '',
       style: Theme.of(context).textTheme.bodyText2,
     );
   }
 
-  Text cardTitle(BuildContext context) {
+  Text _cardTitle(BuildContext context) {
     return Text(
       widget.title,
       style: Theme.of(context).textTheme.bodyText1,
@@ -74,10 +79,10 @@ class _CustomSmallCardState extends State<CustomSmallCard> {
 
   IconButton likeButton() {
     return IconButton(
-      onPressed: isChangedColor,
+      onPressed: _isChangedColor,
       icon: Icon(
         Icons.favorite,
-        color: isLiked ? context.red : context.heatherGrey,
+        color: _isLiked ? context.red : context.heatherGrey,
       ),
     );
   }

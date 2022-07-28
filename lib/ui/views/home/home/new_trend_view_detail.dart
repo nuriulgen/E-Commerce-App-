@@ -21,7 +21,7 @@ class _NewTrendViewDetailState extends State<NewTrendViewDetail>
   @override
   void initState() {
     super.initState();
-    tabController = TabController(length: 2, vsync: this);
+    tabController = TabController(length: context.tabBarCount, vsync: this);
   }
 
   @override

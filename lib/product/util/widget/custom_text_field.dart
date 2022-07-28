@@ -37,20 +37,27 @@ class _CustomTextFieldState extends State<CustomTextField> {
         keyboardType: widget.textInputType,
         textInputAction: TextInputAction.next,
         obscureText: widget.obscureText,
-        decoration: InputDecoration(
-          border: widget.inputBorder ??
-              OutlineInputBorder(
-                  borderRadius: BorderRadius.circular(context.hw10)),
-          labelText: widget.labelText,
-          prefixIcon: widget.prefixIcon,
-          suffixIcon: widget.suffix,
-        ),
-        validator: (String? value) {
-          return (value?.isNotEmpty ?? false)
-              ? null
-              : ValidateEmptyException().toString();
-        },
+        decoration: decoration(context),
+        validator: _validate,
       ),
+    );
+  }
+
+  String? _validate(String? value) {
+    return (value?.isNotEmpty ?? false)
+        ? null
+        : ValidateEmptyException().toString();
+  }
+
+  InputDecoration decoration(BuildContext context) {
+    return InputDecoration(
+      border: widget.inputBorder ??
+          OutlineInputBorder(
+            borderRadius: BorderRadius.circular(context.hw10),
+          ),
+      labelText: widget.labelText,
+      prefixIcon: widget.prefixIcon,
+      suffixIcon: widget.suffix,
     );
   }
 }

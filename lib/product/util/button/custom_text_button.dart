@@ -15,13 +15,17 @@ class CustomTextButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return TextButton(
       onPressed: onPressed,
-      child: Text(
-        title,
-        style: Theme.of(context)
-            .textTheme
-            .subtitle2
-            ?.copyWith(color: textColor, fontWeight: FontWeight.w600),
-      ),
+      child: _textButtonTitle(context),
+    );
+  }
+
+  Text _textButtonTitle(BuildContext context) {
+    return Text(
+      title,
+      style: Theme.of(context)
+          .textTheme
+          .subtitle2
+          ?.copyWith(color: textColor, fontWeight: FontWeight.w600),
     );
   }
 }

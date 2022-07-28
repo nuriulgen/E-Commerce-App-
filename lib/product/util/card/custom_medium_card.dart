@@ -21,11 +21,12 @@ class CustomMediumCard extends StatefulWidget {
 }
 
 class _CustomMediumCardState extends State<CustomMediumCard> {
-  bool isLiked = false;
+  bool _isLiked = false;
+  final int _flex = 2;
 
-  void isChangedColor() {
+  void _isChangedColor() {
     setState(() {
-      isLiked = !isLiked;
+      _isLiked = !_isLiked;
     });
   }
 
@@ -41,8 +42,8 @@ class _CustomMediumCardState extends State<CustomMediumCard> {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Expanded(
-                flex: 2,
-                child: cardImage(),
+                flex: _flex,
+                child: _cardImage(),
               ),
               Padding(
                 padding: context.paddingX2Top,
@@ -50,8 +51,8 @@ class _CustomMediumCardState extends State<CustomMediumCard> {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
-                    cardTitle(context),
-                    cardSubTitle(context),
+                    _cardTitle(context),
+                    _cardSubTitle(context),
                   ],
                 ),
               ),
@@ -62,7 +63,7 @@ class _CustomMediumCardState extends State<CustomMediumCard> {
     );
   }
 
-  Row cardSubTitle(BuildContext context) {
+  Row _cardSubTitle(BuildContext context) {
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
@@ -75,7 +76,7 @@ class _CustomMediumCardState extends State<CustomMediumCard> {
     );
   }
 
-  Text cardTitle(BuildContext context) {
+  Text _cardTitle(BuildContext context) {
     return Text(widget.title,
         style: Theme.of(context)
             .textTheme
@@ -83,14 +84,14 @@ class _CustomMediumCardState extends State<CustomMediumCard> {
             ?.copyWith(color: context.heatherGrey));
   }
 
-  Center cardImage() => Center(child: PngImage(imagePath: widget.imagePath));
+  Center _cardImage() => Center(child: PngImage(imagePath: widget.imagePath));
 
   IconButton likeButton() {
     return IconButton(
-      onPressed: isChangedColor,
+      onPressed: _isChangedColor,
       icon: Icon(
         Icons.favorite,
-        color: isLiked ? context.red : context.heatherGrey,
+        color: _isLiked ? context.red : context.heatherGrey,
       ),
     );
   }
