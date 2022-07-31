@@ -1,4 +1,4 @@
-import 'package:e_commerce_app/core/constants/extension/context_extension.dart';
+import '../../../core/constants/extension/context_extension.dart';
 import 'package:flutter/material.dart';
 
 import '../../../core/constants/image/image_constants.dart';

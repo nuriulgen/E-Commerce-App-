@@ -1,4 +1,4 @@
-import 'package:e_commerce_app/ui/views/authetication/login/view/login_view.dart';
+import '../view/login_view.dart';
 import 'package:flutter/material.dart';
 
 import '../../../../../core/constants/extension/string_extension.dart';

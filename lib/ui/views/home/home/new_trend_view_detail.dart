@@ -1,11 +1,11 @@
-import 'package:e_commerce_app/core/constants/extension/color_extension.dart';
-import 'package:e_commerce_app/core/constants/extension/context_extension.dart';
-import 'package:e_commerce_app/core/constants/extension/string_extension.dart';
-import 'package:e_commerce_app/product/util/widget/custom_app_bar.dart';
+import '../../../../core/constants/extension/color_extension.dart';
+import '../../../../core/constants/extension/context_extension.dart';
+import '../../../../core/constants/extension/string_extension.dart';
+import '../../../../product/util/widget/custom_app_bar.dart';
 import 'package:flutter/material.dart';
 
+import '../../../../product/util/button/custom_outlined_button.dart';
 import '../../../../product/util/card/custom_medium_card.dart';
-import '../../../../product/util/widget/custom_rectangle_tabbar.dart';
 
 class NewTrendViewDetail extends StatefulWidget {
   const NewTrendViewDetail({Key? key}) : super(key: key);
@@ -13,16 +13,8 @@ class NewTrendViewDetail extends StatefulWidget {
   State<NewTrendViewDetail> createState() => _NewTrendViewDetailState();
 }
 
-class _NewTrendViewDetailState extends State<NewTrendViewDetail>
-    with TickerProviderStateMixin {
+class _NewTrendViewDetailState extends State<NewTrendViewDetail> {
   AppStringConstants? appStringConstants = AppStringConstants.instance;
-  late final TabController tabController;
-
-  @override
-  void initState() {
-    super.initState();
-    tabController = TabController(length: context.tabBarCount, vsync: this);
-  }
 
   @override
   Widget build(BuildContext context) {
@@ -33,20 +25,90 @@ class _NewTrendViewDetailState extends State<NewTrendViewDetail>
       ),
       body: Padding(
         padding: context.padding2xHorizontal,
-        child: Column(
-          children: [
-            SizedBox(
-              height: MediaQuery.of(context).size.height - 100,
-              width: MediaQuery.of(context).size.width,
-              child: CustomRectangleTabBar(
-                titleFirst: appStringConstants!.newTrendTabTitle1,
-                titleSecond: appStringConstants!.newTrendTabTitle2,
-                iconFirst: Icons.filter_list_outlined,
-                iconSecond: Icons.tune_outlined,
-                widgetFirst:
-                    ProductList(appStringConstants: appStringConstants),
-                widgetSecond: const Center(),
+        child: SingleChildScrollView(
+          child: Column(
+            children: [
+              Padding(
+                padding: context.paddingXVertical,
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    SortButton(appStringConstants: appStringConstants),
+                    FilterButton(appStringConstants: appStringConstants),
+                  ],
+                ),
               ),
+              SizedBox(
+                height: MediaQuery.of(context).size.height - 10,
+                width: MediaQuery.of(context).size.width,
+                child: ProductList(appStringConstants: appStringConstants),
+              ),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+class FilterButton extends StatelessWidget {
+  const FilterButton({
+    Key? key,
+    required this.appStringConstants,
+  }) : super(key: key);
+
+  final AppStringConstants? appStringConstants;
+
+  @override
+  Widget build(BuildContext context) {
+    return CustomOutlinedButton(
+      onPressed: () {},
+      child: SizedBox(
+        width: context.hw150,
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Icon(Icons.tune_outlined,
+                size: context.hw30, color: context.chasm),
+            Text(
+              appStringConstants!.newTrendTabTitle2,
+              style: Theme.of(context)
+                  .textTheme
+                  .subtitle1
+                  ?.copyWith(color: context.chasm),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
+
+class SortButton extends StatelessWidget {
+  const SortButton({
+    Key? key,
+    required this.appStringConstants,
+  }) : super(key: key);
+
+  final AppStringConstants? appStringConstants;
+
+  @override
+  Widget build(BuildContext context) {
+    return CustomOutlinedButton(
+      onPressed: () {},
+      child: SizedBox(
+        width: context.hw150,
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Icon(Icons.filter_list_outlined,
+                size: context.hw30, color: context.chasm),
+            Text(
+              appStringConstants!.newTrendTabTitle1,
+              style: Theme.of(context)
+                  .textTheme
+                  .subtitle1
+                  ?.copyWith(color: context.chasm),
             ),
           ],
         ),
@@ -65,10 +127,10 @@ class ProductList extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return GridView(
-      gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-        crossAxisCount: context.gridViewCrossAxisCount,
-      ),
+    return GridView.count(
+      shrinkWrap: true,
+      primary: false,
+      crossAxisCount: context.gridViewCrossAxisCount,
       children: [
         CustomMediumCard(
           imagePath: appStringConstants!.newTrendProductImagePath1,
