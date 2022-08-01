@@ -1,3 +1,5 @@
+import 'package:e_commerce_app/product/util/widget/custom_dialog.dart';
+
 import '../../../../core/constants/extension/color_extension.dart';
 import '../../../../core/constants/extension/context_extension.dart';
 import '../../../../core/constants/extension/string_extension.dart';
@@ -6,6 +8,7 @@ import 'package:flutter/material.dart';
 
 import '../../../../product/util/button/custom_outlined_button.dart';
 import '../../../../product/util/card/custom_medium_card.dart';
+import '../../../../product/util/widget/custom_sheet.dart';
 
 class NewTrendViewDetail extends StatefulWidget {
   const NewTrendViewDetail({Key? key}) : super(key: key);
@@ -51,7 +54,7 @@ class _NewTrendViewDetailState extends State<NewTrendViewDetail> {
   }
 }
 
-class FilterButton extends StatelessWidget {
+class FilterButton extends StatefulWidget {
   const FilterButton({
     Key? key,
     required this.appStringConstants,
@@ -60,18 +63,24 @@ class FilterButton extends StatelessWidget {
   final AppStringConstants? appStringConstants;
 
   @override
+  State<FilterButton> createState() => FilterButtonState();
+}
+
+class FilterButtonState extends State<FilterButton> with ProjectSheetMixin {
+  @override
   Widget build(BuildContext context) {
     return CustomOutlinedButton(
-      onPressed: () {},
+      onPressed: () {
+        showCustomSheet(context, const Text('data'), 'gds', true);
+      },
       child: SizedBox(
         width: context.hw150,
         child: Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Icon(Icons.tune_outlined,
-                size: context.hw30, color: context.chasm),
+            Icon(Icons.tune_outlined, size: context.hw30, color: context.chasm),
             Text(
-              appStringConstants!.newTrendTabTitle2,
+              widget.appStringConstants!.newTrendTabTitle2,
               style: Theme.of(context)
                   .textTheme
                   .subtitle1
@@ -84,7 +93,7 @@ class FilterButton extends StatelessWidget {
   }
 }
 
-class SortButton extends StatelessWidget {
+class SortButton extends StatefulWidget {
   const SortButton({
     Key? key,
     required this.appStringConstants,
@@ -93,9 +102,16 @@ class SortButton extends StatelessWidget {
   final AppStringConstants? appStringConstants;
 
   @override
+  State<SortButton> createState() => _SortButtonState();
+}
+
+class _SortButtonState extends State<SortButton> with ProjectDialogMixin {
+  @override
   Widget build(BuildContext context) {
     return CustomOutlinedButton(
-      onPressed: () {},
+      onPressed: () {
+        showCustomDialog(context);
+      },
       child: SizedBox(
         width: context.hw150,
         child: Row(
@@ -104,7 +120,7 @@ class SortButton extends StatelessWidget {
             Icon(Icons.filter_list_outlined,
                 size: context.hw30, color: context.chasm),
             Text(
-              appStringConstants!.newTrendTabTitle1,
+              widget.appStringConstants!.newTrendTabTitle1,
               style: Theme.of(context)
                   .textTheme
                   .subtitle1

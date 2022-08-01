@@ -19,6 +19,7 @@ dependencies:
 
    #Widget
   tab_indicator_styler: ^2.0.0
+  modal_bottom_sheet: ^2.1.0
 
 dev_dependencies:
   flutter_test:

@@ -50,6 +50,7 @@ extension ContextExtension on BuildContext {
   double get hw45 => 45;
   double get hw50 => 50;
   double get hw100 => 100;
+  double get hw120 => 100;
   double get hw150 => 150;
   double get hw160 => 160;
   double get hw170 => 170;

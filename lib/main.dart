@@ -1,5 +1,4 @@
 import 'core/constants/app/app_constants.dart';
-import 'ui/views/home/home/home_view.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
