@@ -2,7 +2,7 @@ import 'core/constants/app/app_constants.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
-import 'ui/views/home/home/new_trend_view_detail.dart';
+import 'ui/views/home/home/search_view.dart';
 
 void main() {
   runApp(const MyApp());
@@ -24,7 +24,7 @@ class MyApp extends StatelessWidget {
         ),
         scaffoldBackgroundColor: const Color(0xFFFFFFFF),
       ),
-      home: const NewTrendViewDetail(),
+      home: const SearchView(),
     );
   }
 }

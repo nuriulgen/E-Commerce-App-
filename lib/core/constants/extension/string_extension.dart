@@ -82,4 +82,8 @@ class AppStringConstants {
   final String newTrendProductImagePath4 = 'tshirt';
   final String newTrendProductImagePath5 = 'short';
   final String newTrendProductImagePath6 = 'bag';
+
+  final String searchHintTitle = 'Search';
+  final String searchImagePath = 'searches';
+  final String searchAlertText = 'You have not recent searches.';
 }

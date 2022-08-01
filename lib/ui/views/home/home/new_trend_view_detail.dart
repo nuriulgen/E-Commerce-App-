@@ -3,12 +3,15 @@ import 'package:e_commerce_app/product/util/widget/custom_dialog.dart';
 import '../../../../core/constants/extension/color_extension.dart';
 import '../../../../core/constants/extension/context_extension.dart';
 import '../../../../core/constants/extension/string_extension.dart';
+import '../../../../product/util/button/custom_text_button.dart';
 import '../../../../product/util/widget/custom_app_bar.dart';
 import 'package:flutter/material.dart';
 
 import '../../../../product/util/button/custom_outlined_button.dart';
 import '../../../../product/util/card/custom_medium_card.dart';
 import '../../../../product/util/widget/custom_sheet.dart';
+
+part './new_trend_view_detail.g.dart';
 
 class NewTrendViewDetail extends StatefulWidget {
   const NewTrendViewDetail({Key? key}) : super(key: key);
@@ -50,145 +53,6 @@ class _NewTrendViewDetailState extends State<NewTrendViewDetail> {
           ),
         ),
       ),
-    );
-  }
-}
-
-class FilterButton extends StatefulWidget {
-  const FilterButton({
-    Key? key,
-    required this.appStringConstants,
-  }) : super(key: key);
-
-  final AppStringConstants? appStringConstants;
-
-  @override
-  State<FilterButton> createState() => FilterButtonState();
-}
-
-class FilterButtonState extends State<FilterButton> with ProjectSheetMixin {
-  @override
-  Widget build(BuildContext context) {
-    return CustomOutlinedButton(
-      onPressed: () {
-        showCustomSheet(context, const Text('data'), 'gds', true);
-      },
-      child: SizedBox(
-        width: context.hw150,
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Icon(Icons.tune_outlined, size: context.hw30, color: context.chasm),
-            Text(
-              widget.appStringConstants!.newTrendTabTitle2,
-              style: Theme.of(context)
-                  .textTheme
-                  .subtitle1
-                  ?.copyWith(color: context.chasm),
-            ),
-          ],
-        ),
-      ),
-    );
-  }
-}
-
-class SortButton extends StatefulWidget {
-  const SortButton({
-    Key? key,
-    required this.appStringConstants,
-  }) : super(key: key);
-
-  final AppStringConstants? appStringConstants;
-
-  @override
-  State<SortButton> createState() => _SortButtonState();
-}
-
-class _SortButtonState extends State<SortButton> with ProjectDialogMixin {
-  @override
-  Widget build(BuildContext context) {
-    return CustomOutlinedButton(
-      onPressed: () {
-        showCustomDialog(context);
-      },
-      child: SizedBox(
-        width: context.hw150,
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Icon(Icons.filter_list_outlined,
-                size: context.hw30, color: context.chasm),
-            Text(
-              widget.appStringConstants!.newTrendTabTitle1,
-              style: Theme.of(context)
-                  .textTheme
-                  .subtitle1
-                  ?.copyWith(color: context.chasm),
-            ),
-          ],
-        ),
-      ),
-    );
-  }
-}
-
-class ProductList extends StatelessWidget {
-  const ProductList({
-    Key? key,
-    required this.appStringConstants,
-  }) : super(key: key);
-
-  final AppStringConstants? appStringConstants;
-
-  @override
-  Widget build(BuildContext context) {
-    return GridView.count(
-      shrinkWrap: true,
-      primary: false,
-      crossAxisCount: context.gridViewCrossAxisCount,
-      children: [
-        CustomMediumCard(
-          imagePath: appStringConstants!.newTrendProductImagePath1,
-          title: appStringConstants!.newTrendProductTitle1,
-          subTitle: appStringConstants!.newTrendProductSubTitle1,
-        ),
-        CustomMediumCard(
-          imagePath: appStringConstants!.newTrendProductImagePath2,
-          title: appStringConstants!.newTrendProductTitle2,
-          subTitle: appStringConstants!.newTrendProductSubTitle2,
-        ),
-        CustomMediumCard(
-          imagePath: appStringConstants!.newTrendProductImagePath3,
-          title: appStringConstants!.newTrendProductTitle3,
-          subTitle: appStringConstants!.newTrendProductSubTitle3,
-        ),
-        CustomMediumCard(
-          imagePath: appStringConstants!.newTrendProductImagePath4,
-          title: appStringConstants!.newTrendProductTitle4,
-          subTitle: appStringConstants!.newTrendProductSubTitle4,
-        ),
-        CustomMediumCard(
-          imagePath: appStringConstants!.newTrendProductImagePath5,
-          title: appStringConstants!.newTrendProductTitle5,
-          subTitle: appStringConstants!.newTrendProductSubTitle5,
-        ),
-        CustomMediumCard(
-          imagePath: appStringConstants!.newTrendProductImagePath6,
-          title: appStringConstants!.newTrendProductTitle6,
-          subTitle: appStringConstants!.newTrendProductSubTitle6,
-        ),
-        CustomMediumCard(
-          imagePath: appStringConstants!.newTrendProductImagePath1,
-          title: appStringConstants!.newTrendProductTitle1,
-          subTitle: appStringConstants!.newTrendProductSubTitle1,
-        ),
-        CustomMediumCard(
-          imagePath: appStringConstants!.newTrendProductImagePath2,
-          title: appStringConstants!.newTrendProductTitle2,
-          subTitle: appStringConstants!.newTrendProductSubTitle2,
-        ),
-      ],
     );
   }
 }

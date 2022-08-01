@@ -7,11 +7,16 @@ mixin ProjectDialogMixin {
   Future<T?> showCustomDialog<T>(
     BuildContext context,
     Widget child,
+    List<Widget>? actionsWidget,
   ) async {
     return showDialog<T>(
         context: context,
         builder: (context) {
-          return CustomMainDialog(context: context, child: child);
+          return CustomMainDialog(
+            context: context,
+            actionsWidget: actionsWidget,
+            child: child,
+          );
         });
   }
 }
@@ -23,7 +28,7 @@ class CustomMainDialog extends AlertDialog {
     Key? key,
     required BuildContext context,
     required this.child,
-    this.actionsWidget,
+     this.actionsWidget,
   }) : super(
           key: key,
           content: child,
