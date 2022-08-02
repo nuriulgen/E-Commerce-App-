@@ -33,25 +33,11 @@ class FilterButtonState extends State<FilterButton> with ProjectSheetMixin {
         showCustomSheet(
           context,
           Padding(
-            padding: context.padding2xHorizontal,
+            padding: context.paddingXHorizontal,
             child: Card(
               child: Padding(
-                padding: context.paddingXHorizontal + context.paddingXVertical,
-                child: Column(
-                    children: List<Widget>.generate(
-                  filterTitle.length,
-                  (index) => Column(
-                    children: [
-                      GestureDetector(
-                        child: ListTile(
-                          title: Text(filterTitle[index].toString()),
-                          trailing: Text(subTitle),
-                        ),
-                      ),
-                      const Divider(),
-                    ],
-                  ),
-                )),
+                padding: context.paddingXVertical,
+                child: Column(children: _filterTitleListFunction()),
               ),
             ),
           ),
@@ -74,6 +60,23 @@ class FilterButtonState extends State<FilterButton> with ProjectSheetMixin {
             ),
           ],
         ),
+      ),
+    );
+  }
+
+  List<Widget> _filterTitleListFunction() {
+    return List<Widget>.generate(
+      filterTitle.length,
+      (index) => Column(
+        children: [
+          GestureDetector(
+            child: ListTile(
+              title: Text(filterTitle[index].toString()),
+              trailing: Text(subTitle),
+            ),
+          ),
+          const Divider(),
+        ],
       ),
     );
   }
@@ -136,19 +139,23 @@ class _SortButtonState extends State<SortButton> with ProjectDialogMixin {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
-      children: List<Widget>.generate(
-        sortTitleList.length,
-        (index) => CustomTextButton(
-          title: sortTitleList[index].toString(),
-          textColor: context.mediumBlack,
-          onPressed: () {},
-        ),
+      children: _sortTitleListFunction(context),
+    );
+  }
+
+  List<Widget> _sortTitleListFunction(BuildContext context) {
+    return List<Widget>.generate(
+      sortTitleList.length,
+      (index) => CustomTextButton(
+        title: sortTitleList[index].toString(),
+        textColor: context.mediumBlack,
+        onPressed: () {},
       ),
     );
   }
 }
 
-class ProductList extends StatelessWidget {
+class ProductList extends StatefulWidget {
   const ProductList({
     Key? key,
     required this.appStringConstants,
@@ -157,13 +164,63 @@ class ProductList extends StatelessWidget {
   final AppStringConstants? appStringConstants;
 
   @override
+  State<ProductList> createState() => _ProductListState();
+}
+
+class _ProductListState extends State<ProductList> {
+  AppStringConstants? appStringConstants = AppStringConstants.instance;
+  
+  List<String> productTitle = [
+    'Handbag LV',
+    'Dress',
+    'Shoes',
+    'T-shirt',
+    'Handbag',
+    'Short',
+  ];
+
+  List<String> productSubTitle = [
+    '225',
+    '87',
+    '201',
+    '102',
+    '98',
+    '86',
+  ];
+
+  List<String> productImage = [
+    'louis_vuitton',
+    'skirt',
+    'shoes',
+    'tshirt',
+    'short',
+    'bag',
+  ];
+
+  @override
   Widget build(BuildContext context) {
     return GridView.count(
       shrinkWrap: true,
       primary: false,
       crossAxisCount: context.gridViewCrossAxisCount,
-      children: [
-        CustomMediumCard(
+      children: _productList(),
+    );
+  }
+
+  List<Widget> _productList() {
+    return List<Widget>.generate(
+      productTitle.length,
+      (index) => CustomMediumCard(
+        imagePath: productImage[index],
+        title: productTitle[index],
+        subTitle: productSubTitle[index],
+      ),
+    );
+  }
+}
+
+/*
+CustomMediumCard(
           imagePath: appStringConstants!.newTrendProductImagePath1,
           title: appStringConstants!.newTrendProductTitle1,
           subTitle: appStringConstants!.newTrendProductSubTitle1,
@@ -203,7 +260,4 @@ class ProductList extends StatelessWidget {
           title: appStringConstants!.newTrendProductTitle2,
           subTitle: appStringConstants!.newTrendProductSubTitle2,
         ),
-      ],
-    );
-  }
-}
+ */

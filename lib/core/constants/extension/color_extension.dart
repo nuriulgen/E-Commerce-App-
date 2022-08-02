@@ -5,7 +5,7 @@ extension ColorExtension on BuildContext {
   Color get red => Colors.red;
   Color get black => Colors.black;
 
-  Color get chasm => const Color(0xFF895F44);
+  Color get chasm => const Color(0xFF8F5F43);
   Color get heatherGrey => const Color(0xFF9D9EA3);
   Color get blackChesnut => const Color(0xFF272422);
 

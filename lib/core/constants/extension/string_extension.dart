@@ -86,4 +86,9 @@ class AppStringConstants {
   final String searchHintTitle = 'Search';
   final String searchImagePath = 'searches';
   final String searchAlertText = 'You have not recent searches.';
+
+  final String navigationBarTitle1 = 'Home';
+  final String navigationBarTitle2 = 'Search';
+  final String navigationBarTitle3 = 'Cart';
+  final String navigationBarTitle4 = 'Profile';
 }

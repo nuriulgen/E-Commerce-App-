@@ -1,14 +1,13 @@
 import 'package:e_commerce_app/product/util/widget/custom_dialog.dart';
+import 'package:flutter/material.dart';
 
 import '../../../../core/constants/extension/color_extension.dart';
 import '../../../../core/constants/extension/context_extension.dart';
 import '../../../../core/constants/extension/string_extension.dart';
-import '../../../../product/util/button/custom_text_button.dart';
-import '../../../../product/util/widget/custom_app_bar.dart';
-import 'package:flutter/material.dart';
-
 import '../../../../product/util/button/custom_outlined_button.dart';
+import '../../../../product/util/button/custom_text_button.dart';
 import '../../../../product/util/card/custom_medium_card.dart';
+import '../../../../product/util/widget/custom_app_bar.dart';
 import '../../../../product/util/widget/custom_sheet.dart';
 
 part './new_trend_view_detail.g.dart';
@@ -45,7 +44,7 @@ class _NewTrendViewDetailState extends State<NewTrendViewDetail> {
                 ),
               ),
               SizedBox(
-                height: MediaQuery.of(context).size.height - 10,
+                height: MediaQuery.of(context).size.height - context.hw10,
                 width: MediaQuery.of(context).size.width,
                 child: ProductList(appStringConstants: appStringConstants),
               ),

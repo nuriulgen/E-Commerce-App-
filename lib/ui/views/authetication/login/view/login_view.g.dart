@@ -19,7 +19,7 @@ class SignUpButton extends StatelessWidget {
         onPressed: () {
           if (formKey.currentState?.validate() ?? false) {
             Navigator.of(context).pushReplacement(
-                MaterialPageRoute(builder: (context) => const HomeView()));
+                MaterialPageRoute(builder: (context) => const CustomNavigationBar()));
           }
         },
         color: context.chasm,

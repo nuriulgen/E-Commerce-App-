@@ -1,3 +1,5 @@
+import 'package:e_commerce_app/ui/views/home/home/new_trend_view_detail.dart';
+
 import '../../../../core/constants/extension/color_extension.dart';
 import '../../../../core/constants/extension/context_extension.dart';
 import 'package:flutter/material.dart';
