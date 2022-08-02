@@ -17,7 +17,7 @@ class _SearchViewState extends State<SearchView> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Padding(
-        padding: context.padding2xHorizontal,
+        padding: context.padding2xHorizontal + context.padding2xVertical,
         child: Column(
           children: [
             Padding(

@@ -21,6 +21,9 @@ dependencies:
   tab_indicator_styler: ^2.0.0
   modal_bottom_sheet: ^2.1.0
 
+  #Lottie
+  lottie: ^1.3.0
+
 dev_dependencies:
   flutter_test:
     sdk: flutter
@@ -33,6 +36,7 @@ flutter:
 
   assets:
     - assets/images/
+    - assets/lottie/
 
 
 

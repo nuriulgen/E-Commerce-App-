@@ -49,18 +49,20 @@ extension ContextExtension on BuildContext {
   double get hw30 => 30;
   double get hw45 => 45;
   double get hw50 => 50;
+  double get hw70 => 70;
   double get hw100 => 100;
-  double get hw120 => 100;
+  double get hw120 => 120;
   double get hw150 => 150;
   double get hw160 => 160;
   double get hw170 => 170;
   double get hw200 => 200;
   double get hw330 => 330;
-  
+
+  double get cardPosition => -80;
+
   //Count
   int get onBoardPageCount => 3;
   int get tabBarCount => 2;
   int get initialIndex => 0;
   int get gridViewCrossAxisCount => 2;
-  
 }

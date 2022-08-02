@@ -91,4 +91,14 @@ class AppStringConstants {
   final String navigationBarTitle2 = 'Search';
   final String navigationBarTitle3 = 'Cart';
   final String navigationBarTitle4 = 'Profile';
+
+  final String profileBackGroundImage = 'profile_background';
+  final String profileProfileImage = 'oval';
+  final String profileUserName = 'Jessi Pham';
+  final String profileTitle1 = 'My Order';
+  final String profileTitle2 = 'Premier Delivery';
+  final String profileTitle3 = 'My Details';
+  final String profileTitle4 = 'Adress Book';
+  final String profileTitle5 = 'Payment Metods';
+  final String profileTitle6 = 'Settings';
 }
