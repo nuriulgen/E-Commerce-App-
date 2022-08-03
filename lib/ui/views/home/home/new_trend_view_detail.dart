@@ -1,4 +1,4 @@
-import 'package:e_commerce_app/product/util/widget/custom_dialog.dart';
+import '../../../../product/util/widget/custom_dialog.dart';
 import 'package:flutter/material.dart';
 
 import '../../../../core/constants/extension/color_extension.dart';

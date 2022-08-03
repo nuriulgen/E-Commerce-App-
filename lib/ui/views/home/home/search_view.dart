@@ -1,6 +1,6 @@
-import 'package:e_commerce_app/core/constants/extension/color_extension.dart';
-import 'package:e_commerce_app/core/constants/extension/context_extension.dart';
-import 'package:e_commerce_app/core/constants/image/image_constants.dart';
+import '../../../../core/constants/extension/color_extension.dart';
+import '../../../../core/constants/extension/context_extension.dart';
+import '../../../../core/constants/image/image_constants.dart';
 import 'package:flutter/material.dart';
 
 import '../../../../core/constants/extension/string_extension.dart';

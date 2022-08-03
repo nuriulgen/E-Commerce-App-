@@ -1,8 +1,8 @@
-import 'package:e_commerce_app/core/constants/extension/color_extension.dart';
-import 'package:e_commerce_app/core/constants/extension/string_extension.dart';
-import 'package:e_commerce_app/ui/views/home/home/home_view.dart';
-import 'package:e_commerce_app/ui/views/home/home/new_trend_view_detail.dart';
-import 'package:e_commerce_app/ui/views/home/home/search_view.dart';
+import '../../core/constants/extension/color_extension.dart';
+import '../../core/constants/extension/string_extension.dart';
+import '../../ui/views/home/home/home_view.dart';
+import '../../ui/views/home/home/new_trend_view_detail.dart';
+import '../../ui/views/home/home/search_view.dart';
 import 'package:flutter/material.dart';
 
 import '../../ui/views/home/profile/profile_view.dart';
@@ -26,7 +26,7 @@ class _CustomNavigationBarState extends State<CustomNavigationBar> {
     const HomeView(),
     const SearchView(),
     const NewTrendViewDetail(),
-    const NewTrendViewDetail(),
+    const ProfileView(),
   ];
 
   @override

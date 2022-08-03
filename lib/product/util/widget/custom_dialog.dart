@@ -1,6 +1,6 @@
-import 'package:e_commerce_app/core/constants/extension/color_extension.dart';
-import 'package:e_commerce_app/core/constants/extension/context_extension.dart';
-import 'package:e_commerce_app/product/util/button/custom_elevated_button.dart';
+import '../../../core/constants/extension/color_extension.dart';
+import '../../../core/constants/extension/context_extension.dart';
+import '../button/custom_elevated_button.dart';
 import 'package:flutter/material.dart';
 
 mixin ProjectDialogMixin {

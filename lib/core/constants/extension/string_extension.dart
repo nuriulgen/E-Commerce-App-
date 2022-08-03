@@ -101,4 +101,20 @@ class AppStringConstants {
   final String profileTitle4 = 'Adress Book';
   final String profileTitle5 = 'Payment Metods';
   final String profileTitle6 = 'Settings';
+  final String profileTitle7 = 'Gift Cards';
+  final String profileTitle8 = 'Need Help?';
+  final String profileTitle9 = 'Signout';
+
+  final String myOrdersTitle = 'My Orders';
+  final String myOrdersTextTitle = 'You currently have no orders';
+  final String myOrdersTextSubTitle = 'Best get shopping App pronto...';
+  final String myOrdersButtonTitle = 'Start Shopping';
+  final String myOrdersImagePath = 'my_order';
+
+  final String addPaymentTitle = 'Add Payment';
+  final String addPaymentTextTitle = 'You need a billing address';
+  final String addPaymentTextSubTitle =
+      'You currently have no saved address.Without one, you won\'t able to add a newpayment method.';
+  final String addPaymentButtonTitle = 'Add new address';
+  final String addPaymentImagePath = 'add_payment';
 }

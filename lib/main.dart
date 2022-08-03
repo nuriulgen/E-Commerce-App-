@@ -1,8 +1,8 @@
-import 'package:e_commerce_app/ui/views/authetication/onboarding/view/onboarding_view.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
 import 'core/constants/app/app_constants.dart';
+import 'ui/views/home/profile/profile_view.dart';
 
 void main() {
   runApp(const MyApp());
@@ -24,7 +24,7 @@ class MyApp extends StatelessWidget {
         ),
         scaffoldBackgroundColor: const Color(0xFFFFFFFF),
       ),
-      home: const OnBoardingView(),
+      home: const ProfileView(),
     );
   }
 }

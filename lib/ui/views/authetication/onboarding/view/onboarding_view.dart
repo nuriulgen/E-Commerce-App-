@@ -1,11 +1,11 @@
-import '../../../../../core/constants/extension/color_extension.dart';
-import '../../../../../core/constants/extension/context_extension.dart';
-import '../../login/view/login_view.dart';
 import 'package:flutter/material.dart';
 
+import '../../../../../core/constants/extension/color_extension.dart';
+import '../../../../../core/constants/extension/context_extension.dart';
 import '../../../../../product/constants/duration_items.dart';
 import '../../../../../product/util/button/custom_elevated_button.dart';
 import '../../../../../product/util/widget/onboard_widget.dart';
+import '../../login/view/login_view.dart';
 import '../viewmodel/onboarding_viewmodel.dart';
 
 class OnBoardingView extends StatefulWidget {
