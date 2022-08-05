@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
 import 'core/constants/app/app_constants.dart';
-import 'ui/views/home/profile/profile_view.dart';
+import 'ui/views/home/profile/add_gifts_cards_view.dart';
 
 void main() {
   runApp(const MyApp());
@@ -24,7 +24,7 @@ class MyApp extends StatelessWidget {
         ),
         scaffoldBackgroundColor: const Color(0xFFFFFFFF),
       ),
-      home: const ProfileView(),
+      home: const AddGiftCardsView(),
     );
   }
 }

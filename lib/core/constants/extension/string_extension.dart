@@ -87,11 +87,6 @@ class AppStringConstants {
   final String searchImagePath = 'searches';
   final String searchAlertText = 'You have not recent searches.';
 
-  final String navigationBarTitle1 = 'Home';
-  final String navigationBarTitle2 = 'Search';
-  final String navigationBarTitle3 = 'Cart';
-  final String navigationBarTitle4 = 'Profile';
-
   final String profileBackGroundImage = 'profile_background';
   final String profileProfileImage = 'oval';
   final String profileUserName = 'Jessi Pham';
@@ -117,4 +112,26 @@ class AppStringConstants {
       'You currently have no saved address.Without one, you won\'t able to add a newpayment method.';
   final String addPaymentButtonTitle = 'Add new address';
   final String addPaymentImagePath = 'add_payment';
+
+  final String giftCardsTitle = 'Gift cards & voucher';
+  final String giftCardsTextTitle = 'You have no card yet';
+  final String giftCardsTextSubTitle1 =
+      'You currently have no cards linked to you\n';
+  final String giftCardsTextSubTitle2 = 'account.\n';
+  final String giftCardsTextSubTitle3 =
+      'Get started by see redeeming of buying.';
+  final String giftCardsAddGiftButton = 'Add Gift Cards';
+  final String giftCardsBuyGiftButton = 'Buy Gift Voucher';
+  final String giftCardsImagePath = 'gifts_card';
+
+  final String addGiftTitle = 'Add Gift Cards';
+  final String addGiftTextTitle =
+      'Enter the long number and scratch off the panel on your card to reveal your pin as shown below.';
+  final String addGiftCardTitle1 = 'Back of Gift Card';
+  final String addGiftCardTitle2 = '123456789456 8943';
+  final String addGiftCardImagePath = 'qr';
+  final String addGiftTextFieldTitle1 = '16-Digit Code';
+  final String addGiftTextFieldTitle2 = '4-Digit Pin';
+  final String addGiftLabelText1= 'Enter 16-Digit Code';
+  final String addGiftLabelText2 = 'Enter 4-Digit Pin';
 }

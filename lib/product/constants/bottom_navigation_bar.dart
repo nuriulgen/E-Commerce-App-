@@ -1,8 +1,9 @@
+// ignore_for_file: constant_identifier_names
+
 import '../../core/constants/extension/color_extension.dart';
-import '../../core/constants/extension/string_extension.dart';
 import '../../ui/views/home/home/home_view.dart';
 import '../../ui/views/home/home/new_trend_view_detail.dart';
-import '../../ui/views/home/home/search_view.dart';
+import '../../ui/views/home/search_view.dart';
 import 'package:flutter/material.dart';
 
 import '../../ui/views/home/profile/profile_view.dart';
@@ -31,7 +32,6 @@ class _CustomNavigationBarState extends State<CustomNavigationBar> {
 
   @override
   Widget build(BuildContext context) {
-    AppStringConstants? appStringConstants = AppStringConstants.instance;
     return Scaffold(
       body: IndexedStack(
         index: _currentIndex,
@@ -44,31 +44,32 @@ class _CustomNavigationBarState extends State<CustomNavigationBar> {
           unselectedItemColor: context.heatherGrey,
           showUnselectedLabels: true,
           onTap: onTapped,
-          items: _barItems(appStringConstants),
+          items: _barItems(),
         ),
       ),
     );
   }
 
-  List<BottomNavigationBarItem> _barItems(
-      AppStringConstants? appStringConstants) {
+  List<BottomNavigationBarItem> _barItems() {
     return [
       BottomNavigationBarItem(
         icon: const Icon(Icons.home),
-        label: appStringConstants!.navigationBarTitle1,
+        label: BottomNavItem.Home.name,
       ),
       BottomNavigationBarItem(
         icon: const Icon(Icons.search),
-        label: appStringConstants.navigationBarTitle2,
+        label: BottomNavItem.Search.name,
       ),
       BottomNavigationBarItem(
         icon: const Icon(Icons.shopping_cart_outlined),
-        label: appStringConstants.navigationBarTitle3,
+        label: BottomNavItem.Cart.name,
       ),
       BottomNavigationBarItem(
         icon: const Icon(Icons.person_outline_outlined),
-        label: appStringConstants.navigationBarTitle4,
+        label: BottomNavItem.Profile.name,
       ),
     ];
   }
 }
+
+enum BottomNavItem { Home, Search, Cart, Profile }

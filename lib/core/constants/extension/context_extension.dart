@@ -17,7 +17,7 @@ extension ContextExtension on BuildContext {
   EdgeInsets get padding2xHorizontal =>
       const EdgeInsets.symmetric(horizontal: 20);
 
-  EdgeInsets get paddingX2Top => const EdgeInsets.only(top: 10);
+  EdgeInsets get paddingX2Top => const EdgeInsets.only(top: 5);
   EdgeInsets get paddingXTop => const EdgeInsets.only(top: 10);
   EdgeInsets get padding2xTop => const EdgeInsets.only(top: 20);
 

@@ -9,7 +9,8 @@ import 'package:lottie/lottie.dart';
 
 import '../../../../product/constants/duration_items.dart';
 import '../../../../product/util/widget/custom_list_tile.dart';
-import 'adress_book_view.dart';
+import 'add_payment_view.dart';
+import 'my_orders_view.dart';
 
 class ProfileView extends StatefulWidget {
   const ProfileView({Key? key}) : super(key: key);
@@ -30,8 +31,10 @@ class _ProfileViewState extends State<ProfileView>
         vsync: this, duration: DurationItems.durationNormal());
   }
 
+
   @override
   Widget build(BuildContext context) {
+    
     return Scaffold(
       resizeToAvoidBottomInset: true,
       body: SingleChildScrollView(
@@ -199,10 +202,10 @@ class _OrderCard extends StatelessWidget {
               icon: Icons.list_alt_outlined,
               title: appStringConstants!.profileTitle1,
               onTap: () {
-                /* Navigator.push(
+                Navigator.push(
                     context,
                     MaterialPageRoute(
-                        builder: (context) => const MyOrdersView())); */
+                        builder: (context) => const MyOrdersView()));
               },
             ),
             CustomListTile(

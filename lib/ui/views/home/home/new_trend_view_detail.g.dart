@@ -169,32 +169,32 @@ class ProductList extends StatefulWidget {
 
 class _ProductListState extends State<ProductList> {
   AppStringConstants? appStringConstants = AppStringConstants.instance;
-  
-  List<String> productTitle = [
-    'Handbag LV',
-    'Dress',
-    'Shoes',
-    'T-shirt',
-    'Handbag',
-    'Short',
+
+  var productTitle = [
+    AppStringConstants.instance!.newTrendProductTitle1,
+    AppStringConstants.instance!.newTrendProductTitle2,
+    AppStringConstants.instance!.newTrendProductTitle3,
+    AppStringConstants.instance!.newTrendProductTitle4,
+    AppStringConstants.instance!.newTrendProductTitle5,
+    AppStringConstants.instance!.newTrendProductTitle6,
   ];
 
-  List<String> productSubTitle = [
-    '225',
-    '87',
-    '201',
-    '102',
-    '98',
-    '86',
+  var productSubTitle = [
+    AppStringConstants.instance!.newTrendProductSubTitle1,
+    AppStringConstants.instance!.newTrendProductSubTitle2,
+    AppStringConstants.instance!.newTrendProductSubTitle3,
+    AppStringConstants.instance!.newTrendProductSubTitle4,
+    AppStringConstants.instance!.newTrendProductSubTitle5,
+    AppStringConstants.instance!.newTrendProductSubTitle6,
   ];
 
-  List<String> productImage = [
-    'louis_vuitton',
-    'skirt',
-    'shoes',
-    'tshirt',
-    'short',
-    'bag',
+  var productImage = [
+     AppStringConstants.instance!.newTrendProductImagePath1,
+     AppStringConstants.instance!.newTrendProductImagePath2,
+     AppStringConstants.instance!.newTrendProductImagePath3,
+     AppStringConstants.instance!.newTrendProductImagePath4,
+     AppStringConstants.instance!.newTrendProductImagePath5,
+     AppStringConstants.instance!.newTrendProductImagePath6,
   ];
 
   @override
@@ -210,54 +210,15 @@ class _ProductListState extends State<ProductList> {
   List<Widget> _productList() {
     return List<Widget>.generate(
       productTitle.length,
-      (index) => CustomMediumCard(
-        imagePath: productImage[index],
-        title: productTitle[index],
-        subTitle: productSubTitle[index],
+      (index) => Column(
+        children: [
+          CustomMediumCard(
+            imagePath: productImage[index],
+            title: productTitle[index],
+            subTitle: productSubTitle[index],
+          ),
+        ],
       ),
     );
   }
 }
-
-/*
-CustomMediumCard(
-          imagePath: appStringConstants!.newTrendProductImagePath1,
-          title: appStringConstants!.newTrendProductTitle1,
-          subTitle: appStringConstants!.newTrendProductSubTitle1,
-        ),
-        CustomMediumCard(
-          imagePath: appStringConstants!.newTrendProductImagePath2,
-          title: appStringConstants!.newTrendProductTitle2,
-          subTitle: appStringConstants!.newTrendProductSubTitle2,
-        ),
-        CustomMediumCard(
-          imagePath: appStringConstants!.newTrendProductImagePath3,
-          title: appStringConstants!.newTrendProductTitle3,
-          subTitle: appStringConstants!.newTrendProductSubTitle3,
-        ),
-        CustomMediumCard(
-          imagePath: appStringConstants!.newTrendProductImagePath4,
-          title: appStringConstants!.newTrendProductTitle4,
-          subTitle: appStringConstants!.newTrendProductSubTitle4,
-        ),
-        CustomMediumCard(
-          imagePath: appStringConstants!.newTrendProductImagePath5,
-          title: appStringConstants!.newTrendProductTitle5,
-          subTitle: appStringConstants!.newTrendProductSubTitle5,
-        ),
-        CustomMediumCard(
-          imagePath: appStringConstants!.newTrendProductImagePath6,
-          title: appStringConstants!.newTrendProductTitle6,
-          subTitle: appStringConstants!.newTrendProductSubTitle6,
-        ),
-        CustomMediumCard(
-          imagePath: appStringConstants!.newTrendProductImagePath1,
-          title: appStringConstants!.newTrendProductTitle1,
-          subTitle: appStringConstants!.newTrendProductSubTitle1,
-        ),
-        CustomMediumCard(
-          imagePath: appStringConstants!.newTrendProductImagePath2,
-          title: appStringConstants!.newTrendProductTitle2,
-          subTitle: appStringConstants!.newTrendProductSubTitle2,
-        ),
- */

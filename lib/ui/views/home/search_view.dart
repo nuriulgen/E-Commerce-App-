@@ -1,9 +1,9 @@
-import '../../../../core/constants/extension/color_extension.dart';
-import '../../../../core/constants/extension/context_extension.dart';
-import '../../../../core/constants/image/image_constants.dart';
+import '../../../core/constants/extension/color_extension.dart';
+import '../../../core/constants/extension/context_extension.dart';
+import '../../../core/constants/image/image_constants.dart';
 import 'package:flutter/material.dart';
 
-import '../../../../core/constants/extension/string_extension.dart';
+import '../../../core/constants/extension/string_extension.dart';
 
 class SearchView extends StatefulWidget {
   const SearchView({Key? key}) : super(key: key);

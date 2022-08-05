@@ -5,13 +5,13 @@ import 'package:flutter/material.dart';
 class CustomListTile extends StatefulWidget {
   const CustomListTile({
     Key? key,
-    required this.icon,
+    this.icon,
     required this.title,
     this.onTap,
   }) : super(key: key);
 
   final String title;
-  final IconData icon;
+  final IconData? icon;
   final void Function()? onTap;
 
   @override
@@ -24,7 +24,7 @@ class _CustomListTileState extends State<CustomListTile> {
     return InkWell(
       onTap: widget.onTap,
       child: ListTile(
-        leading: Icon(widget.icon, color: context.chasm, size: context.hw30),
+        leading: Icon(widget.icon, color: context.chasm, size: context.hw30) ,
         title: Text(widget.title),
         trailing: Icon(Icons.chevron_right_outlined, size: context.hw30),
       ),
