@@ -1,30 +1,31 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
+import 'package:provider/provider.dart';
 
 import 'core/constants/app/app_constants.dart';
-import 'ui/views/home/profile/add_gifts_cards_view.dart';
+import 'core/init/theme/theme_notifier.dart';
+import 'ui/views/home/profile/test.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(
+    MultiProvider(
+      providers: [
+        ChangeNotifierProvider<ThemeNotifier>(
+            create: (context) => ThemeNotifier()),
+      ],
+      builder: (context, child) => const MyApp(),
+    ),
+  );
 }
 
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
-
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: ApplicationConstants.PROJECT_NAME,
-      theme: ThemeData(
-        appBarTheme: const AppBarTheme(
-          backgroundColor: Colors.transparent,
-          elevation: 0,
-          systemOverlayStyle: SystemUiOverlayStyle.dark,
-        ),
-        scaffoldBackgroundColor: const Color(0xFFFFFFFF),
-      ),
-      home: const AddGiftCardsView(),
+      theme: context.watch<ThemeNotifier>().currentTheme,
+      home: const ThemeChange(),
     );
   }
 }

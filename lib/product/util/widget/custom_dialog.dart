@@ -1,7 +1,8 @@
+import 'package:flutter/material.dart';
+
 import '../../../core/constants/extension/color_extension.dart';
 import '../../../core/constants/extension/context_extension.dart';
 import '../button/custom_elevated_button.dart';
-import 'package:flutter/material.dart';
 
 mixin ProjectDialogMixin {
   Future<T?> showCustomDialog<T>(

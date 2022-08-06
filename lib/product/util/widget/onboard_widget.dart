@@ -1,7 +1,7 @@
-import '../../../core/constants/extension/color_extension.dart';
-import '../../../core/constants/extension/context_extension.dart';
 import 'package:flutter/material.dart';
 
+import '../../../core/constants/extension/color_extension.dart';
+import '../../../core/constants/extension/context_extension.dart';
 import '../../../core/constants/image/image_constants.dart';
 
 class OnBoardWidget extends StatelessWidget {

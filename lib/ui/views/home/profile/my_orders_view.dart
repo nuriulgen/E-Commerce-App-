@@ -1,12 +1,12 @@
+import 'package:flutter/material.dart';
+
 import '../../../../core/constants/extension/color_extension.dart';
 import '../../../../core/constants/extension/context_extension.dart';
 import '../../../../core/constants/extension/string_extension.dart';
 import '../../../../core/constants/image/image_constants.dart';
+import '../../../../product/constants/bottom_navigation_bar.dart';
 import '../../../../product/util/button/custom_elevated_button.dart';
 import '../../../../product/util/widget/custom_app_bar.dart';
-import 'package:flutter/material.dart';
-
-import '../../../../product/constants/bottom_navigation_bar.dart';
 
 class MyOrdersView extends StatefulWidget {
   const MyOrdersView({Key? key}) : super(key: key);

@@ -1,14 +1,14 @@
+import 'package:flutter/material.dart';
+import 'package:lottie/lottie.dart';
+
 import '../../../../core/constants/extension/color_extension.dart';
 import '../../../../core/constants/extension/context_extension.dart';
 import '../../../../core/constants/extension/string_extension.dart';
 import '../../../../core/constants/image/image_constants.dart';
-import '../../../../product/constants/lottie_items.dart';
-import '../../authetication/onboarding/view/onboarding_view.dart';
-import 'package:flutter/material.dart';
-import 'package:lottie/lottie.dart';
-
 import '../../../../product/constants/duration_items.dart';
+import '../../../../product/constants/lottie_items.dart';
 import '../../../../product/util/widget/custom_list_tile.dart';
+import '../../authetication/onboarding/view/onboarding_view.dart';
 import 'add_payment_view.dart';
 import 'my_orders_view.dart';
 

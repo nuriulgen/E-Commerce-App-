@@ -113,6 +113,13 @@ class AppStringConstants {
   final String addPaymentButtonTitle = 'Add new address';
   final String addPaymentImagePath = 'add_payment';
 
+  final String addPaymentDetailTitle = 'Add Payment';
+  final String addPaymentDetailTextTitle =
+      'You curently have no saved paymend method. Get stard by adding one.';
+  final String addPaymentDetailTextSubTitle = 'Need help with these options?';
+  final String addPaymentDetailListTileTitle =
+      'What is 4 eassy payments with Klarna?';
+
   final String giftCardsTitle = 'Gift cards & voucher';
   final String giftCardsTextTitle = 'You have no card yet';
   final String giftCardsTextSubTitle1 =
@@ -132,6 +139,6 @@ class AppStringConstants {
   final String addGiftCardImagePath = 'qr';
   final String addGiftTextFieldTitle1 = '16-Digit Code';
   final String addGiftTextFieldTitle2 = '4-Digit Pin';
-  final String addGiftLabelText1= 'Enter 16-Digit Code';
+  final String addGiftLabelText1 = 'Enter 16-Digit Code';
   final String addGiftLabelText2 = 'Enter 4-Digit Pin';
 }

@@ -1,8 +1,8 @@
-import 'package:e_commerce_app/core/constants/extension/context_extension.dart';
-import 'package:e_commerce_app/core/constants/extension/string_extension.dart';
-import 'package:e_commerce_app/core/constants/image/image_constants.dart';
-import 'package:e_commerce_app/product/util/widget/custom_app_bar.dart';
-import 'package:e_commerce_app/product/util/widget/custom_text_field.dart';
+import '../../../../core/constants/extension/context_extension.dart';
+import '../../../../core/constants/extension/string_extension.dart';
+import '../../../../core/constants/image/image_constants.dart';
+import '../../../../product/util/widget/custom_app_bar.dart';
+import '../../../../product/util/widget/custom_text_field.dart';
 import 'package:flutter/material.dart';
 
 class AddGiftCardsView extends StatefulWidget {
@@ -25,7 +25,7 @@ class _AddGiftCardsViewState extends State<AddGiftCardsView> {
             children: [
               Padding(padding: context.paddingXTop, child: _textTitle()),
               Padding(
-                  padding: context.padding2xVertical, child: _card(context)),
+                  padding: context.padding2xVertical, child: _customCard(context)),
               Padding(
                   padding: context.paddingXVertical,
                   child: _inputTextField(context)),
@@ -57,7 +57,7 @@ class _AddGiftCardsViewState extends State<AddGiftCardsView> {
     );
   }
 
-  SizedBox _card(BuildContext context) {
+  SizedBox _customCard(BuildContext context) {
     return SizedBox(
       width: context.hw330,
       height: context.hw150,

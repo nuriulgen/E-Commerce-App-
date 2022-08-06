@@ -1,14 +1,13 @@
-import 'new_trend_view_detail.dart';
+import 'package:flutter/material.dart';
 
 import '../../../../core/constants/extension/color_extension.dart';
 import '../../../../core/constants/extension/context_extension.dart';
-import 'package:flutter/material.dart';
-
 import '../../../../core/constants/extension/string_extension.dart';
 import '../../../../product/util/button/custom_text_button.dart';
 import '../../../../product/util/card/custom_big_card.dart';
 import '../../../../product/util/card/custom_list_tile_card.dart';
 import '../../../../product/util/card/custom_small_card.dart';
+import 'new_trend_view_detail.dart';
 
 part 'home_view.g.dart';
 

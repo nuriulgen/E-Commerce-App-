@@ -1,7 +1,7 @@
-import '../view/login_view.dart';
 import 'package:flutter/material.dart';
 
 import '../../../../../core/constants/extension/string_extension.dart';
+import '../view/login_view.dart';
 
 abstract class LoginViewModel extends State<LoginView> {
   final AppStringConstants? appStringConstants = AppStringConstants.instance;
