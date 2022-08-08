@@ -3,7 +3,7 @@ import 'package:provider/provider.dart';
 
 import 'core/constants/app/app_constants.dart';
 import 'core/init/theme/theme_notifier.dart';
-import 'ui/views/home/profile/test.dart';
+import 'ui/views/home/profile/view/profile_view.dart';
 
 void main() {
   runApp(
@@ -25,7 +25,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: ApplicationConstants.PROJECT_NAME,
       theme: context.watch<ThemeNotifier>().currentTheme,
-      home: const ThemeChange(),
+      home: const ProfileView(),
     );
   }
 }

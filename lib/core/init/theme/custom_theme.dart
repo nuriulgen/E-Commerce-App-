@@ -20,5 +20,6 @@ class CustomTheme {
       elevation: 0,
       systemOverlayStyle: SystemUiOverlayStyle.light,
     ),
+    scaffoldBackgroundColor: Colors.black,
   );
 }

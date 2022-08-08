@@ -1,3 +1,4 @@
+import 'custom_theme.dart';
 import 'package:flutter/material.dart';
 
 class ThemeNotifier extends ChangeNotifier {
@@ -8,6 +9,7 @@ class ThemeNotifier extends ChangeNotifier {
     notifyListeners();
   }
 
-  ThemeData get currentTheme =>
-      isLightTheme ? ThemeData.light() : ThemeData.dark();
+  ThemeData get currentTheme => isLightTheme
+      ? CustomTheme.instance.lightTheme
+      : CustomTheme.instance.darkTheme;
 }
