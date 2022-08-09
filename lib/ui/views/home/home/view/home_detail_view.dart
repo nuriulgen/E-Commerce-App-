@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 
 class HomeDetailView extends StatefulWidget {
-  final List? jsondata;
+  final List? jsonData;
   const HomeDetailView({
     Key? key,
-    this.jsondata,
+    this.jsonData,
   }) : super(key: key);
   @override
   State<HomeDetailView> createState() => _HomeDetailViewState();
@@ -13,18 +13,11 @@ class HomeDetailView extends StatefulWidget {
 class _HomeDetailViewState extends State<HomeDetailView> {
   @override
   Widget build(BuildContext context) {
+    String text = 'Home View Detail';
     return Scaffold(
-        appBar: AppBar(
-          title: const Text('widget.title',
-              style: TextStyle(
-                color: Colors.white,
-              )),
-        ),
-        body: const Center(
-          child: Text('widget.title',
-              style: TextStyle(
-                color: Colors.white,
-              )),
-        ));
+      body: Center(
+        child: Text(text),
+      ),
+    );
   }
 }

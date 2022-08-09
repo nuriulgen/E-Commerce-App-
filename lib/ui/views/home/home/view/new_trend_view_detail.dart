@@ -1,4 +1,3 @@
-import '../../../../../product/util/widget/custom_dialog.dart';
 import 'package:flutter/material.dart';
 
 import '../../../../../core/constants/extension/color_extension.dart';
@@ -8,6 +7,7 @@ import '../../../../../product/util/button/custom_outlined_button.dart';
 import '../../../../../product/util/button/custom_text_button.dart';
 import '../../../../../product/util/card/custom_medium_card.dart';
 import '../../../../../product/util/widget/custom_app_bar.dart';
+import '../../../../../product/util/widget/custom_dialog.dart';
 import '../../../../../product/util/widget/custom_sheet.dart';
 
 part 'new_trend_view_detail.g.dart';

@@ -33,8 +33,6 @@ class OnBoardWidget extends StatelessWidget {
           padding: context.paddingXVertical,
           child: _subTitle(context),
         ),
-
-        // Expanded(child: _header),
       ],
     );
   }

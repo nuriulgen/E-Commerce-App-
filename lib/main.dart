@@ -1,18 +1,16 @@
+import 'product/init/product_init.dart';
+import 'ui/views/authetication/onboarding/view/onboarding_view.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
 import 'core/constants/app/app_constants.dart';
 import 'core/init/theme/theme_notifier.dart';
-import 'ui/views/home/home/view/home_view.dart';
-
 
 void main() {
+  final productInit = ProductInit();
   runApp(
     MultiProvider(
-      providers: [
-        ChangeNotifierProvider<ThemeNotifier>(
-            create: (context) => ThemeNotifier()),
-      ],
+      providers: productInit.providers,
       builder: (context, child) => const MyApp(),
     ),
   );
@@ -26,7 +24,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: ApplicationConstants.PROJECT_NAME,
       theme: context.watch<ThemeNotifier>().currentTheme,
-      home: const HomeView(),
+      home: const OnBoardingView(),
     );
   }
 }
