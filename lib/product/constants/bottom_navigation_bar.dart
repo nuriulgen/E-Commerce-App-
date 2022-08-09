@@ -3,8 +3,8 @@
 import 'package:flutter/material.dart';
 
 import '../../core/constants/extension/color_extension.dart';
-import '../../ui/views/home/home/home_view.dart';
-import '../../ui/views/home/home/new_trend_view_detail.dart';
+import '../../ui/views/home/home/view/home_view.dart';
+import '../../ui/views/home/home/view/new_trend_view_detail.dart';
 import '../../ui/views/home/profile/view/profile_view.dart';
 import '../../ui/views/home/search_view.dart';
 

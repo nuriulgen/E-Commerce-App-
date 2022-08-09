@@ -51,7 +51,7 @@ class _ProfileViewState extends State<ProfileView>
                 _editIcon(context),
                 _userName(context),
                 _OrderCard(appStringConstants: appStringConstants),
-                Positioned(top: 20, right: 20, child: _changeTheme(context))
+                _changeThemeButton(context)
               ],
             ),
             SizedBox(height: context.hw100),
@@ -68,6 +68,32 @@ class _ProfileViewState extends State<ProfileView>
         ),
       ),
     );
+  }
+
+  Positioned _changeThemeButton(BuildContext context) {
+    return Positioned(
+                  top: context.hw20,
+                  right: context.hw20,
+                  child: Align(
+                    alignment: Alignment.bottomLeft,
+                    child: SizedBox(
+                      width: context.hw100,
+                      child: InkWell(
+                        onTap: () {
+                          _controller.animateTo(isLight ? 0.5 : 1);
+
+                          isLight = !isLight;
+                          Future.microtask(() =>
+                              context.read<ThemeNotifier>().changeTheme());
+                        },
+                        child: Lottie.asset(
+                          LottieItems.themeChange.lottiePath,
+                          repeat: false,
+                          controller: _controller,
+                        ),
+                      ),
+                    ),
+                  ),);
   }
 
   SizedBox _signOutButton(BuildContext context) {
@@ -100,28 +126,6 @@ class _ProfileViewState extends State<ProfileView>
             Icons.edit,
             color: context.chasm,
             size: context.hw20,
-          ),
-        ),
-      ),
-    );
-  }
-
-  Align _changeTheme(BuildContext context) {
-    return Align(
-      alignment: Alignment.bottomLeft,
-      child: SizedBox(
-        width: context.hw100,
-        child: InkWell(
-          onTap: () {
-            _controller.animateTo(isLight ? 0.5 : 1);
-
-            isLight = !isLight;
-            Future.microtask(() => context.read<ThemeNotifier>().changeTheme());
-          },
-          child: Lottie.asset(
-            LottieItems.themeChange.lottiePath,
-            repeat: false,
-            controller: _controller,
           ),
         ),
       ),

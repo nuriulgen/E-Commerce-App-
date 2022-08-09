@@ -12,8 +12,10 @@ class BigCardFirst extends StatelessWidget {
   Widget build(BuildContext context) {
     return InkWell(
       onTap: () {
-        Navigator.push(context,
-            MaterialPageRoute(builder: ((context) => const NewTrendViewDetail())));
+        Navigator.push(
+            context,
+            MaterialPageRoute(
+                builder: ((context) => const NewTrendViewDetail())));
       },
       child: CustomBigCard(
         imagePath: appStringConstants!.homeBigCardImagePath1,

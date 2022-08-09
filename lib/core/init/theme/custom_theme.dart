@@ -16,7 +16,7 @@ class CustomTheme {
 
   final darkTheme = ThemeData(
     appBarTheme: const AppBarTheme(
-      backgroundColor: Colors.red,
+      backgroundColor: Colors.transparent,
       elevation: 0,
       systemOverlayStyle: SystemUiOverlayStyle.light,
     ),

@@ -1,4 +1,4 @@
-part of './new_trend_view_detail.dart';
+part of 'new_trend_view_detail.dart';
 
 class FilterButton extends StatefulWidget {
   const FilterButton({

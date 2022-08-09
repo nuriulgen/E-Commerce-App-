@@ -1,12 +1,14 @@
+import 'package:e_commerce_app/core/constants/extension/color_extension.dart';
+import 'package:e_commerce_app/core/constants/extension/context_extension.dart';
 import 'package:flutter/material.dart';
 
-import '../../../../core/constants/extension/color_extension.dart';
-import '../../../../core/constants/extension/context_extension.dart';
-import '../../../../core/constants/extension/string_extension.dart';
-import '../../../../product/util/button/custom_text_button.dart';
-import '../../../../product/util/card/custom_big_card.dart';
-import '../../../../product/util/card/custom_list_tile_card.dart';
-import '../../../../product/util/card/custom_small_card.dart';
+import '../../../../../core/constants/extension/string_extension.dart';
+import '../../../../../product/util/button/custom_text_button.dart';
+import '../../../../../product/util/card/custom_big_card.dart';
+import '../../../../../product/util/card/custom_list_tile_card.dart';
+import '../../../../../product/util/card/custom_small_card.dart';
+import '../viewmodel/home_viewmodel.dart';
+import 'home_detail_view.dart';
 import 'new_trend_view_detail.dart';
 
 part 'home_view.g.dart';
@@ -17,8 +19,7 @@ class HomeView extends StatefulWidget {
   State<HomeView> createState() => _HomeViewState();
 }
 
-class _HomeViewState extends State<HomeView> {
-  AppStringConstants? appStringConstants = AppStringConstants.instance;
+class _HomeViewState extends HomeViewModel {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -31,7 +32,17 @@ class _HomeViewState extends State<HomeView> {
               BigCardFirst(appStringConstants: appStringConstants),
               Padding(
                 padding: context.padding2xVertical,
-                child: SmallCardFirst(appStringConstants: appStringConstants),
+                child: GestureDetector(
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => HomeDetailView(jsondata: data),
+                        ),
+                      );
+                    },
+                    child:
+                        SmallCardFirst(appStringConstants: appStringConstants)),
               ),
               Padding(
                 padding: context.paddingXVertical,
@@ -51,5 +62,3 @@ class _HomeViewState extends State<HomeView> {
     );
   }
 }
-
-
