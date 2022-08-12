@@ -21,9 +21,7 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
           color: context.heatherGrey,
           size: context.hw30,
         ),
-        onPressed: () {
-          Navigator.pop(context);
-        },
+        onPressed: () {},
       ),
       title: Text(
         title,

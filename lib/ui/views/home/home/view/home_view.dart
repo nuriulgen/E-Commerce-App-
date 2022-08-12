@@ -1,3 +1,6 @@
+import 'package:auto_route/auto_route.dart';
+import '../../../../../product/navigation/app_router.dart';
+
 import '../../../../../core/constants/extension/color_extension.dart';
 import '../../../../../core/constants/extension/context_extension.dart';
 import 'package:flutter/material.dart';
@@ -8,8 +11,6 @@ import '../../../../../product/util/card/custom_big_card.dart';
 import '../../../../../product/util/card/custom_list_tile_card.dart';
 import '../../../../../product/util/card/custom_small_card.dart';
 import '../viewmodel/home_viewmodel.dart';
-import 'home_detail_view.dart';
-import 'new_trend_view_detail.dart';
 
 part 'home_view.g.dart';
 
@@ -32,14 +33,9 @@ class _HomeViewState extends HomeViewModel {
               BigCardFirst(appStringConstants: appStringConstants),
               Padding(
                 padding: context.padding2xVertical,
-                child: GestureDetector(
-                    onTap: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                          builder: (context) => HomeDetailView(jsonData: data),
-                        ),
-                      );
+                child: TextButton(
+                    onPressed: () {
+                      context.router.push(HomeDetailRoute(jsonData: data));
                     },
                     child:
                         SmallCardFirst(appStringConstants: appStringConstants)),

@@ -53,10 +53,7 @@ class _OrderCard extends StatelessWidget {
               icon: Icons.list_alt_outlined,
               title: appStringConstants!.profileTitle1,
               onTap: () {
-                Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                        builder: (context) => const MyOrdersView()));
+                context.router.push(const MyOrdersRoute());
               },
             ),
             CustomListTile(
@@ -93,10 +90,7 @@ class _AccountCard extends StatelessWidget {
               icon: Icons.location_on_outlined,
               title: appStringConstants!.profileTitle4,
               onTap: () {
-                Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                        builder: (context) => const AdressBookView()));
+                context.router.push(const AdressBookRoute());
               },
             ),
             CustomListTile(

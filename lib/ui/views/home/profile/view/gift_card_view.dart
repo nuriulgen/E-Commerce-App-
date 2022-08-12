@@ -1,3 +1,5 @@
+import 'package:auto_route/auto_route.dart';
+import '../../../../../product/navigation/app_router.dart';
 import 'package:flutter/material.dart';
 
 import '../../../../../core/constants/extension/color_extension.dart';
@@ -6,7 +8,6 @@ import '../../../../../core/constants/extension/string_extension.dart';
 import '../../../../../core/constants/image/image_constants.dart';
 import '../../../../../product/util/button/custom_elevated_button.dart';
 import '../../../../../product/util/widget/custom_app_bar.dart';
-import 'add_gifts_cards_view.dart';
 
 class GiftCardView extends StatefulWidget {
   const GiftCardView({Key? key}) : super(key: key);
@@ -92,10 +93,7 @@ class _GiftCardViewState extends State<GiftCardView> {
     return CustomElevatedButton(
       title: appStringConstants!.giftCardsAddGiftButton,
       onPressed: () {
-        Navigator.push(
-            context,
-            MaterialPageRoute(
-                builder: ((context) => const AddGiftCardsView())));
+        context.router.push(const AddGiftCardsRoute());
       },
       color: context.chasm,
       textColor: context.white,

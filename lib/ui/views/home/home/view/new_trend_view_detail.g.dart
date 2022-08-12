@@ -69,11 +69,9 @@ class FilterButtonState extends State<FilterButton> with ProjectSheetMixin {
       filterTitle.length,
       (index) => Column(
         children: [
-          GestureDetector(
-            child: ListTile(
-              title: Text(filterTitle[index].toString()),
-              trailing: Text(subTitle),
-            ),
+          ListTile(
+            title: Text(filterTitle[index].toString()),
+            trailing: Text(subTitle),
           ),
           const Divider(),
         ],
@@ -189,12 +187,12 @@ class _ProductListState extends State<ProductList> {
   ];
 
   var productImage = [
-     AppStringConstants.instance!.newTrendProductImagePath1,
-     AppStringConstants.instance!.newTrendProductImagePath2,
-     AppStringConstants.instance!.newTrendProductImagePath3,
-     AppStringConstants.instance!.newTrendProductImagePath4,
-     AppStringConstants.instance!.newTrendProductImagePath5,
-     AppStringConstants.instance!.newTrendProductImagePath6,
+    AppStringConstants.instance!.newTrendProductImagePath1,
+    AppStringConstants.instance!.newTrendProductImagePath2,
+    AppStringConstants.instance!.newTrendProductImagePath3,
+    AppStringConstants.instance!.newTrendProductImagePath4,
+    AppStringConstants.instance!.newTrendProductImagePath5,
+    AppStringConstants.instance!.newTrendProductImagePath6,
   ];
 
   @override

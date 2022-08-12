@@ -5,14 +5,14 @@ import '../../../../../core/constants/image/image_constants.dart';
 import '../../../../../product/util/widget/custom_app_bar.dart';
 import 'package:flutter/material.dart';
 
-class AddPatmentDetail extends StatefulWidget {
-  const AddPatmentDetail({Key? key}) : super(key: key);
+class AddPaymentDetail extends StatefulWidget {
+   const AddPaymentDetail({Key? key}) : super(key: key);
 
   @override
-  State<AddPatmentDetail> createState() => _AddPatmentDetailState();
+  State<AddPaymentDetail> createState() => _AddPaymentDetailState();
 }
 
-class _AddPatmentDetailState extends State<AddPatmentDetail> {
+class _AddPaymentDetailState extends State<AddPaymentDetail> {
   AppStringConstants? appStringConstants = AppStringConstants.instance;
 
   final List<String> _imagePath = [

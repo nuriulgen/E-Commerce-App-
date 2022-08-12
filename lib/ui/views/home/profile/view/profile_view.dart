@@ -1,3 +1,4 @@
+import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
 import 'package:provider/provider.dart';
@@ -9,10 +10,8 @@ import '../../../../../core/constants/image/image_constants.dart';
 import '../../../../../core/init/theme/theme_notifier.dart';
 import '../../../../../product/constants/duration_items.dart';
 import '../../../../../product/constants/lottie_items.dart';
+import '../../../../../product/navigation/app_router.dart';
 import '../../../../../product/util/widget/custom_list_tile.dart';
-import '../../../authetication/onboarding/view/onboarding_view.dart';
-import 'add_payment_view.dart';
-import 'my_orders_view.dart';
 
 part 'profile_view.g.dart';
 
@@ -72,28 +71,29 @@ class _ProfileViewState extends State<ProfileView>
 
   Positioned _changeThemeButton(BuildContext context) {
     return Positioned(
-                  top: context.hw20,
-                  right: context.hw20,
-                  child: Align(
-                    alignment: Alignment.bottomLeft,
-                    child: SizedBox(
-                      width: context.hw100,
-                      child: InkWell(
-                        onTap: () {
-                          _controller.animateTo(isLight ? 0.5 : 1);
+      top: context.hw20,
+      right: context.hw20,
+      child: Align(
+        alignment: Alignment.bottomLeft,
+        child: SizedBox(
+          width: context.hw100,
+          child: InkWell(
+            onTap: () {
+              _controller.animateTo(isLight ? 0.5 : 1);
 
-                          isLight = !isLight;
-                          Future.microtask(() =>
-                              context.read<ThemeNotifier>().changeTheme());
-                        },
-                        child: Lottie.asset(
-                          LottieItems.themeChange.lottiePath,
-                          repeat: false,
-                          controller: _controller,
-                        ),
-                      ),
-                    ),
-                  ),);
+              isLight = !isLight;
+              Future.microtask(
+                  () => context.read<ThemeNotifier>().changeTheme());
+            },
+            child: Lottie.asset(
+              LottieItems.themeChange.lottiePath,
+              repeat: false,
+              controller: _controller,
+            ),
+          ),
+        ),
+      ),
+    );
   }
 
   SizedBox _signOutButton(BuildContext context) {
@@ -104,10 +104,7 @@ class _ProfileViewState extends State<ProfileView>
           icon: Icons.logout_outlined,
           title: appStringConstants!.profileTitle9,
           onTap: () {
-            Navigator.pushReplacement(
-                context,
-                MaterialPageRoute(
-                    builder: ((context) => const OnBoardingView())));
+            context.router.navigate(const OnBoardingRoute());
           },
         ),
       ),

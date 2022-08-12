@@ -9,7 +9,9 @@ import '../../ui/views/home/profile/view/profile_view.dart';
 import '../../ui/views/home/search_view.dart';
 
 class CustomNavigationBar extends StatefulWidget {
-  const CustomNavigationBar({Key? key}) : super(key: key);
+  //CustomNavigationBar({Key? key}) : super(key: key);
+  const CustomNavigationBar({super.key});
+
   @override
   State<CustomNavigationBar> createState() => _CustomNavigationBarState();
 }

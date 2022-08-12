@@ -1,3 +1,5 @@
+import 'package:auto_route/auto_route.dart';
+
 import '../../../core/constants/extension/context_extension.dart';
 import 'package:flutter/material.dart';
 
@@ -34,9 +36,9 @@ class CustomMainSheet extends StatelessWidget {
           children: [
             Row(
               children: [
-                InkWell(
-                  onTap: () {
-                    Navigator.pop(context);
+                TextButton(
+                  onPressed: () {
+                    context.router.pop();
                   },
                   child: const Padding(
                     padding: EdgeInsets.zero,

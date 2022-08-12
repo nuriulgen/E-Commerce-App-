@@ -1,3 +1,4 @@
+import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 
 import '../../../../../core/constants/extension/color_extension.dart';
@@ -51,6 +52,7 @@ class _AdressBookViewState extends State<AdressBookView> {
       child: CustomElevatedButton(
         title: appStringConstants!.addPaymentButtonTitle,
         onPressed: () {
+          context.router.push;
           Navigator.push(
               context,
               MaterialPageRoute(

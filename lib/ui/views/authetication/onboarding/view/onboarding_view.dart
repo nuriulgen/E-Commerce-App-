@@ -1,3 +1,5 @@
+import 'package:auto_route/auto_route.dart';
+import '../../../../../product/navigation/app_router.dart';
 import 'package:flutter/material.dart';
 
 import '../../../../../core/constants/extension/color_extension.dart';
@@ -5,7 +7,6 @@ import '../../../../../core/constants/extension/context_extension.dart';
 import '../../../../../product/constants/duration_items.dart';
 import '../../../../../product/util/button/custom_elevated_button.dart';
 import '../../../../../product/util/widget/onboard_widget.dart';
-import '../../login/view/login_view.dart';
 import '../viewmodel/onboarding_viewmodel.dart';
 
 class OnBoardingView extends StatefulWidget {
@@ -54,10 +55,7 @@ class _OnBoardingViewState extends OnBoardingViewModel {
           Future.microtask(
             () {
               if (activePage == (context.onBoardPageCount - 1)) {
-                Navigator.of(context).push(
-                  MaterialPageRoute(
-                      builder: (BuildContext context) => const LoginView()),
-                );
+                context.router.push( LoginRoute());
               }
             },
           );

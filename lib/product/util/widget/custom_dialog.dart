@@ -1,3 +1,4 @@
+import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 
 import '../../../core/constants/extension/color_extension.dart';
@@ -40,7 +41,7 @@ class CustomMainDialog extends AlertDialog {
                   child: CustomElevatedButton(
                     title: _AlertButton.cancel.name,
                     onPressed: () {
-                      Navigator.of(context).pop();
+                       context.router.pop();
                     },
                     color: context.white,
                     textColor: context.chasm,
@@ -51,7 +52,7 @@ class CustomMainDialog extends AlertDialog {
                   child: CustomElevatedButton(
                     title: _AlertButton.done.name,
                     onPressed: () {
-                      Navigator.of(context).pop();
+                    context.router.pop();
                     },
                     color: context.chasm,
                     textColor: context.white,

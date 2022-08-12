@@ -1,6 +1,6 @@
-import 'package:e_commerce_app/ui/views/authetication/onboarding/view/onboarding_view.dart';
+import '../../ui/views/authetication/onboarding/view/onboarding_view.dart';
 import 'package:auto_route/auto_route.dart';
-import 'package:e_commerce_app/ui/views/home/search_view.dart';
+import '../../ui/views/home/search_view.dart';
 import 'package:flutter/material.dart';
 
 import '../../ui/views/authetication/login/view/login_view.dart';
@@ -8,10 +8,12 @@ import '../../ui/views/home/home/view/home_detail_view.dart';
 import '../../ui/views/home/home/view/home_view.dart';
 import '../../ui/views/home/home/view/new_trend_view_detail.dart';
 import '../../ui/views/home/profile/view/add_gifts_cards_view.dart';
+import '../../ui/views/home/profile/view/add_payment_detail_view.dart';
 import '../../ui/views/home/profile/view/add_payment_view.dart';
 import '../../ui/views/home/profile/view/gift_card_view.dart';
 import '../../ui/views/home/profile/view/my_orders_view.dart';
 import '../../ui/views/home/profile/view/profile_view.dart';
+import '../constants/bottom_navigation_bar.dart';
 
 part 'app_router.gr.dart';
 
@@ -20,7 +22,7 @@ part 'app_router.gr.dart';
   routes: <AutoRoute>[
     AutoRoute(page: OnBoardingView, path: 'onBoard', initial: true),
     AutoRoute(page: LoginView, path: 'login'),
-    // AutoRoute(page: CustomNavigationBar, path: 'navigation'),
+    AutoRoute(page: CustomNavigationBar, path: 'navigation'),
     AutoRoute(
       name: 'HomeFullRoute',
       page: EmptyPageRouter,
